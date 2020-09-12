@@ -1,18 +1,18 @@
 an = int(input("l'année"))
 mois = int(input("le mois au format 0X ou XX"))
-#vérification année bissextile
+# vérification année bissextile
 def bissextile(an):
     if (an % 4) == 0 or (an % 400) == 0:
         isbissextile = True
-        if (an % 100) == 0 :
+        if (an % 100) == 0:
             isbissextile = False
-        else :
+        else:
             isbissextile = False
-    else :
+    else:
         isbissextile = False
     return(isbissextile)
-#print(bissextile(an))
-#calcul nb de jours pour 1an
+# print(bissextile(an))
+# calcul nb de jours pour 1an
 def nbjoursannee(isbissextile):
     nban = 0
     if isbissextile == True:
@@ -21,7 +21,7 @@ def nbjoursannee(isbissextile):
         nban = 365
     return(nban)
 print(nban)
-#nbjour pour 1mois
+# nbjour pour 1mois
 def nbjoursmois(isbissextile, mois):
     if mois == 1 or mois == 3 or mois == 5 or mois == 7 or mois == 8 or mois == 10 or mois == 12:
         nbmois = 31
@@ -34,4 +34,3 @@ def nbjoursmois(isbissextile, mois):
         nbmois = 30
     return(nbmois)
 print(nbmois)
-        
