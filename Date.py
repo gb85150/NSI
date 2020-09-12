@@ -18,7 +18,6 @@ def bissextile(an):
 
 
 def nbjoursannee(isbissextile):
-    nban = 0
     if isbissextile is True:
         nban = 366
     else:
