@@ -23,9 +23,9 @@ def nbjoursannee(isbissextile):
     else:
         nban = 365
     return(nban)
+    print(nban)
 
 
-print(nban)
 # nbjour pour 1mois
 
 
@@ -40,6 +40,4 @@ def nbjoursmois(isbissextile, mois):
     else:
         nbmois = 30
     return(nbmois)
-
-
-print(nbmois)
+    print(nbmois)
