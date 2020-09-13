@@ -13,10 +13,10 @@ def bissextile(an):
     else:
         isbissextile = False
     return(isbissextile)
-# print(bissextile(an))
+    print(bissextile(an))
+
+
 # calcul nb de jours pour 1an
-
-
 def nbjoursannee(isbissextile):
     if isbissextile is True:
         nban = 366
@@ -24,8 +24,6 @@ def nbjoursannee(isbissextile):
         nban = 365
     return(nban)
     print(nban)
-
-
 # nbjour pour 1mois
 
 
