@@ -19,7 +19,7 @@ def bissextile(an):
 
 # calcul nb de jours pour 1an
 def nbjoursannee(an):
-    if bissextile(an) :
+    if bissextile(an):
         nban = 366
     else:
         nban = 365
@@ -40,19 +40,21 @@ def nbjoursmois(an, mois):
         nbmois = 30
     return(nbmois)
     print(nbmois)
-    
 
-#Calcul du nbre de jours total
+
+# Calcul du nbre de jours total
 def nbjours(jourdépart, moisdépart, andépart, jours, mois, an):
-    jours=0
-    #Les années
+    jours = 0
+    # Les années
     for i in range(andépart + 1, an):
         jours = jours + nbjoursannee(i)
         return(jours)
-    #Les mois
+    # Les mois
     for i in range(moisdépart + 1, mois):
         jours = jours + nbjoursmois(i)
         return(jours)
-    #Les jours
+    # Les jours
     jours
+
+
 print(nbjours(jourdépart, moisdépart, andépart, joursarrivée, moisarrivée, anarrivée))
