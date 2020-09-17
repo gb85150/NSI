@@ -32,7 +32,7 @@ def nbjoursmois(an, mois):
     if mois == 1 or mois == 3 or mois == 5 or mois == 7 or mois == 8 or mois == 10 or mois == 12:
         nbmois = 31
     elif mois == 2:
-        if isbissextile(an):
+        if bissextile(an):
             nbmois = 29
         else:
             nbmois = 28
