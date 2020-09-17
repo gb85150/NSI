@@ -1,6 +1,15 @@
-an = int(input("l'année"))
-mois = int(input("le mois au format 0X ou XX"))
-jour = int(input("le jour"))
+# Calculateur de JOURS --EXPERIMENTAL--
+# Geoffrey BOUSSEAU 1F
+# ce programme calcule en jours l'écart entre deux dates donnés
+# this script is calculating the number of days beetween 2 dates given before
+
+
+andépart = int(input("l'année de départ "))
+moisdépart = int(input("le mois de départ au format 0X ou XX "))
+jourdépart = int(input("le jour de départ "))
+anarrivée = int(input("l'année d'arrivée "))
+moisarrivée = int(input("le mois d'arrivée au format 0X ou XX "))
+joursarrivée = int(input("le jour d'arrivée "))
 # vérification année bissextile
 
 
@@ -32,3 +41,18 @@ def nbjoursmois(an, mois):
     return(nbmois)
     print(nbmois)
     
+
+#Calcul du nbre de jours total
+def nbjours(jourdépart, moisdépart, andépart, jours, mois, an):
+    jours=0
+    #Les années
+    for i in range(andépart + 1, an):
+        jours = jours + nbjoursannee(i)
+        return(jours)
+    #Les mois
+    for i in range(moisdépart + 1, mois):
+        jours = jours + nbjoursmois(i)
+        return(jours)
+    #Les jours
+    jours
+print(nbjours(jourdépart, moisdépart, andépart, joursarrivée, moisarrivée, anarrivée))
