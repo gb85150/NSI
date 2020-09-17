@@ -1,6 +1,8 @@
 # blackjack
 from random import randint
 nbredes = int(input("combien désirez-vous lancer de dés ? "))
+
+
 def lancer(nbredes):
     for k in range(nbredes):
         resultat = 0
@@ -19,7 +21,7 @@ elif resultatbanque > 21:
     print("joueur gagnant !")
 elif resultatjoueur > resultatbanque:
     print("joueur gagnant !")
-elif resultatbanque > resultatjoueur: 
+elif resultatbanque > resultatjoueur:
     print("banque gagnante !")
 else:
     print("une erreur s'est produite veuillez nous excuser pour la gêne occasionnée cordialement, le service de débugging")
