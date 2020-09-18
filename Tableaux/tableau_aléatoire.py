@@ -2,9 +2,7 @@ from random import randint
 
 
 def tabAleatiore(n, a, b):
-    liste = [0] * n
-    for i in range(n):
-        liste[i] = randint(a, b)
+    liste = [randint(a, b) for i in range(n)]
     return liste
 
 
