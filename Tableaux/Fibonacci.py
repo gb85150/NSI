@@ -1,9 +1,8 @@
 #Fibonacci
 suite_fibonacci = [0,1]
 for i in range(2, 30):
-    suite_fibonacci.append([i-1]+[i-2])
-# try:
-#     if suite_fibonacci[30] == 514229:
-print(suite_fibonacci)
-#     except SyntaxError
-# print("erreur détectée")
+    suite_fibonacci.append(suite_fibonacci[i-1]+suite_fibonacci[i-2])
+if suite_fibonacci[30] == 514229:
+    print(suite_fibonacci)
+else
+    print("erreur détectée")
