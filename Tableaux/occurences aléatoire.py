@@ -2,7 +2,6 @@
 # init
 from random import randint
 Tirage = []
-Nbre_occurences = []
 
 
 def count(valeur, tableau):
@@ -13,8 +12,9 @@ def count(valeur, tableau):
     return countresult
 
 
+while restart? == y:
 # Tirage de 1000 entiers
-Tirage.append(randint(1, 10)) for i in range(1000)
-for i in range(1, 11):
-    Nbre_occurences[i] = count(Tirage, i)
-print(Nbre_occurences)
+    Tirage=[randint(1, 10) for i in range(1000)]
+    for i in range(1,11):
+        print(count(i, Tirage))
+    restart?=int(input("recommencer ? (y/n)"))
