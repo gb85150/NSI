@@ -1,12 +1,5 @@
 from random import randint
-
-
-def count(valeur, tableau):
-    countresult = 0
-    for i in range(len(tableau)):
-        if tableau[i] == valeur:
-            countresult += 1
-    return countresult
+from custom_count import count
 
 
 def occurences(v, t):
