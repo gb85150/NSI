@@ -1,4 +1,6 @@
 from random import randint
+
+
 def occurences(v, t):
     return(t.count(v))
 
