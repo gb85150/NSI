@@ -5,7 +5,7 @@ for i in range(2, 30):
 if suite_fibonacci[29] == 514229:
     print(suite_fibonacci)
 else:
-    print (
+    print(
         """
         FATAL ERROR
         erreur détectée veuillez controler votre code.
