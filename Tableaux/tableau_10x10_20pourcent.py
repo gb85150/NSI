@@ -12,12 +12,13 @@ def guessuser():
     x = int(input("sélectionnez la position de x (va de 1 à 10) "))
     y = int(input("sélectionnez la position de y (va de 1 à 10) "))
     guess = [x, y]
+    guess.reverse()
     return guess
 
 
 def checktab(guess):
-    x = guess[1]
-    y = guess[0]
+    x = guess[0]
+    y = guess[1]
     if tab[x][y] == 1 :
         print("Tu as trouvé la position bravo !")
         score = 1
