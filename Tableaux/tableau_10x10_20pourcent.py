@@ -54,7 +54,7 @@ def Main():
 tab = listgen()
 nbde1 = 0
 Main()
-if str(input("Recommencer ? (y/n): ")) == y :
+if str(input("Recommencer ? (y/n): ")) == "y" :
     Main()
 else:
     print("Merci d'avoir joué")
