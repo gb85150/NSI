@@ -19,7 +19,7 @@ def guessuser():
 def checktab(guess):
     x = guess[0]
     y = guess[1]
-    if tab[x][y] == 1 :
+    if tab[x][y] == 1:
         print("Tu as trouvé la position bravo !")
         score = 1
         return score
@@ -54,7 +54,7 @@ def Main():
 tab = listgen()
 nbde1 = 0
 Main()
-if str(input("Recommencer ? (y/n): ")) == "y" :
+if str(input("Recommencer ? (y/n): ")) == "y":
     Main()
 else:
     print("Merci d'avoir joué")
