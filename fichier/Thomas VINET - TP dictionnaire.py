@@ -1,6 +1,9 @@
 import random
 
 def AddValueToDict(k, d, v, i):
+    """
+
+    """
     # k = key - d = dict - v = value - i = type value
     # si le dictionnaire 'd' contient la clé 'k'
     # on récupère la valeur
@@ -20,7 +23,7 @@ def AddValueToDict(k, d, v, i):
     d[k] = i
     # on retourne le dictionnaire 'd'
     return d
-def dico_alea() -> dict:
+def ASCIIrandom_alea() -> dict:
     """
     Fonction qui construit un dictionnaire de codage
     à chaque lettre MAJUSCULE de l'alphabet on fait correspondre
@@ -34,16 +37,18 @@ def dico_alea() -> dict:
     for i in range(0,26):
         ASCIIrandom[chr(i+65)]=ASCII[i]
     return ASCIIrandom
-def crypto_lettre(dico: dict, lettre: str) -> str:
+def crypto_lettre(ASCIIrandom: dict, lettre: str) -> str:
     """
     Fonction qui renvoie une lettre cryptée d'après le dictionnaire associé
-    :param dico:
+    :param ASCIIrandom:
     :param lettre: lettre MAJUSCULE
     :return: la lettre cryptée en MAJUSCULE
     """
-    pass
-
-def crypto_texte(dico: dict, texte: str) -> str:
+    ASCIIrandom=ASCIIrandom_alea()
+    for k in len(lettre):
+        texte=texte+ASCIIrandom[lettre]
+    return texte
+def crypto_texte(ASCIIrandom: dict, texte: str) -> str:
     """
     Fonction qui renvoie un texte crypté à partir du texte entré et
     du dictionnaire associé
@@ -72,11 +77,11 @@ def occurrence(texte: str) -> dict:
     """
     pass
 
-def maxi(dico: dict) -> str:
+def maxi(ASCIIrandom: dict) -> str:
     """
     Fonction qui renvoie la lettre ayant la plus grande occurence
     des lettres du dictionnaire
-    :param dico: dictionnaire des occurences
+    :param ASCIIrandom: dictionnaire des occurences
     :return: la lettre ayant la plus grande occurence
     """
     pass
@@ -91,10 +96,10 @@ def propose(texte: str) -> dict:
     """
     pass
 
-def permute(dico: dict,l1: str,l2: str) -> dict:
+def permute(ASCIIrandom: dict,l1: str,l2: str) -> dict:
     """
     Fonction qui permute 2 lettres dans un dictionnaire
-    :param dico:
+    :param ASCIIrandom:
     :param l1: lettre en MAJUSCULE
     :param l2: lettre en MAJUSCULE
     :return: le nouveau dictionnaire
@@ -114,5 +119,7 @@ permute(d,"Q","H")
 print()
 print(crypto_texte(d, table))
 """
-tmp = dico_alea()
-print(tmp)
+## DEBUG: use pass to disable
+lettre = "Bonjour, A B C"
+print(ASCIIrandom_alea())
+print(crypto_lettre(ASCIIrandom_alea(),lettre))
