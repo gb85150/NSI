@@ -1,5 +1,6 @@
 import random
 
+
 def AddValueToDict(k, d, v, i):
     """
 
@@ -23,6 +24,8 @@ def AddValueToDict(k, d, v, i):
     d[k] = i
     # on retourne le dictionnaire 'd'
     return d
+
+
 def ASCIIrandom_alea() -> dict:
     """
     Fonction qui construit un dictionnaire de codage
@@ -53,8 +56,6 @@ def crypto_lettre(ASCIIrandom: dict, lettre: str) -> str:
 
 
 def crypto_texte(ASCIIrandom: dict, texte: str) -> str:
-
-
     """
     Fonction qui renvoie un texte crypté à partir du texte entré et
     du dictionnaire associé
@@ -74,6 +75,7 @@ def lire_fichier(fichier: str) -> list:
     """
     pass
 
+
 def occurrence(texte: str) -> dict:
     """
     Fonction qui renvoie un dictionnaire composé des lettres de
@@ -84,6 +86,7 @@ def occurrence(texte: str) -> dict:
     """
     pass
 
+
 def maxi(ASCIIrandom: dict) -> str:
     """
     Fonction qui renvoie la lettre ayant la plus grande occurence
@@ -92,6 +95,7 @@ def maxi(ASCIIrandom: dict) -> str:
     :return: la lettre ayant la plus grande occurence
     """
     pass
+
 
 def propose(texte: str) -> dict:
     """
@@ -103,7 +107,8 @@ def propose(texte: str) -> dict:
     """
     pass
 
-def permute(ASCIIrandom: dict,l1: str,l2: str) -> dict:
+
+def permute(ASCIIrandom: dict, l1: str, l2: str) -> dict:
     """
     Fonction qui permute 2 lettres dans un dictionnaire
     :param ASCIIrandom:
@@ -111,6 +116,7 @@ def permute(ASCIIrandom: dict,l1: str,l2: str) -> dict:
     :param l2: lettre en MAJUSCULE
     :return: le nouveau dictionnaire
     """
+
 
 """
 #programme principal
@@ -126,7 +132,7 @@ permute(d,"Q","H")
 print()
 print(crypto_texte(d, table))
 """
-## DEBUG: use pass to disable
+# DEBUG: use pass to disable
 lettre = "Bonjour, A B C"
 print(ASCIIrandom_alea())
-print(crypto_lettre(ASCIIrandom_alea(),lettre))
+print(crypto_lettre(ASCIIrandom_alea(), lettre))
