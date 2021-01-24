@@ -30,13 +30,15 @@ def ASCIIrandom_alea() -> dict:
     une lettre MAJUSCULE prise aléatoirement
     :return: un dictionnaire ex : {'A': 'D', 'B': 'Y'....}
     """
-    ASCII = [chr(i) for i in range(65,91)]
+    ASCII = [chr(i) for i in range(65, 91)]
     ASCIIrandom = {}
     random.shuffle(ASCII)
 
-    for i in range(0,26):
-        ASCIIrandom[chr(i+65)]=ASCII[i]
+    for i in range(0, 26):
+        ASCIIrandom[chr(i+65)] = ASCII[i]
     return ASCIIrandom
+
+
 def crypto_lettre(ASCIIrandom: dict, lettre: str) -> str:
     """
     Fonction qui renvoie une lettre cryptée d'après le dictionnaire associé
@@ -44,11 +46,15 @@ def crypto_lettre(ASCIIrandom: dict, lettre: str) -> str:
     :param lettre: lettre MAJUSCULE
     :return: la lettre cryptée en MAJUSCULE
     """
-    ASCIIrandom=ASCIIrandom_alea()
+    ASCIIrandom = ASCIIrandom_alea()
     for k in len(lettre):
-        texte=texte+ASCIIrandom[lettre]
+        texte = texte + ASCIIrandom[lettre]
     return texte
+
+
 def crypto_texte(ASCIIrandom: dict, texte: str) -> str:
+
+
     """
     Fonction qui renvoie un texte crypté à partir du texte entré et
     du dictionnaire associé
@@ -58,6 +64,7 @@ def crypto_texte(ASCIIrandom: dict, texte: str) -> str:
     :return: le texte crypté en MAJUSCULES
     """
     pass
+
 
 def lire_fichier(fichier: str) -> list:
     """
