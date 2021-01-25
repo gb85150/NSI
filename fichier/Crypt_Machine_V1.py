@@ -3,11 +3,10 @@ import random
 
 def AddValueToDict(k, d, v, i):
     """
-
+    k = key - d = dict - v = value - i = type value
+    si le dictionnaire 'd' contient la clé 'k'
+    on récupère la valeur
     """
-    # k = key - d = dict - v = value - i = type value
-    # si le dictionnaire 'd' contient la clé 'k'
-    # on récupère la valeur
     if k in d: i = d[k]
     # détermination du type de la valeur
     # si la valeur est de type set()
@@ -49,9 +48,12 @@ def crypto_lettre(ASCIIrandom: dict, lettre: str) -> str:
     :param lettre: lettre MAJUSCULE
     :return: la lettre cryptée en MAJUSCULE
     """
-    ASCIIrandom = ASCIIrandom_alea()
-    for k in len(lettre):
-        texte = texte + ASCIIrandom[lettre]
+    texte = ""
+    for k in range(len(lettre)):
+        if lettre[k] in ASCIIrandom.items():
+            texte = texte + ASCIIrandom[lettre[k]]
+        else:
+            texte = texte + lettre[k]
     return texte
 
 
@@ -73,7 +75,10 @@ def lire_fichier(fichier: str) -> list:
     :param fichier:
     :return: liste contenant le texte
     """
-    pass
+    with open(fichier, "r") as fopen:
+        liste = []
+        liste = fopen
+        return liste
 
 
 def occurrence(texte: str) -> dict:
@@ -133,6 +138,5 @@ print()
 print(crypto_texte(d, table))
 """
 # DEBUG: use pass to disable
-lettre = "Bonjour, A B C"
-print(ASCIIrandom_alea())
-print(crypto_lettre(ASCIIrandom_alea(), lettre))
+print(crypto_lettre(ASCIIrandom_alea(), "Bonjour, A B C".upper()))
+print(lire_fichier(input("file path ? :")))
