@@ -10,13 +10,13 @@ def AddValueToDict(k, d, v, i):
     if k in d: i = d[k]
     # détermination du type de la valeur
     # si la valeur est de type set()
-    if   isinstance(i, set):   i.add(v)
+    if isinstance(i, set): i.add(v)
     # si la valeur est de type list()
-    elif isinstance(i, list):  i.append(v)
+    elif isinstance(i, list): i.append(v)
     # si la valeur est de type str()
-    elif isinstance(i, str):   i += str(v)
+    elif isinstance(i, str): i += str(v)
     # si la valeur est de type int()
-    elif isinstance(i, int):   i += int(v)
+    elif isinstance(i, int): i += int(v)
     # si la valeur est de type float()
     elif isinstance(i, float): i += float(v)
     # on met à jour l'objet 'i' pour la clé 'k' dans le dictionnaire 'd'
