@@ -75,9 +75,9 @@ def lire_fichier(fichier: str) -> list:
     :param fichier:
     :return: liste contenant le texte
     """
-    with open(fichier, "r") as fopen:
+    with open(fichier, "r") as fopen():
         liste = []
-        liste = fopen
+        liste = fopen.rstrip()
         return liste
 
 
@@ -89,6 +89,8 @@ def occurrence(texte: str) -> dict:
     :param texte: le texte crypté en MAJUSCULES
     :return: un dictionnaire
     """
+    with open(encryptedfile, "r") as fopen():
+        rstrip()
     pass
 
 
@@ -139,4 +141,4 @@ print(crypto_texte(d, table))
 """
 # DEBUG: use pass to disable
 print(crypto_lettre(ASCIIrandom_alea(), "Bonjour, A B C".upper()))
-print(lire_fichier(input("file path ? :")))
+print(lire_fichier(input("file path ? (including extension like .txt) : ")))
