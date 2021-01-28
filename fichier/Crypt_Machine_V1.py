@@ -7,18 +7,24 @@ def AddValueToDict(k, d, v, i):
     si le dictionnaire 'd' contient la clé 'k'
     on récupère la valeur
     """
-    if k in d: i = d[k]
+    if k in d:
+        i = d[k]
     # détermination du type de la valeur
     # si la valeur est de type set()
-    if isinstance(i, set): i.add(v)
+    if isinstance(i, set):
+        i.add(v)
     # si la valeur est de type list()
-    elif isinstance(i, list): i.append(v)
+    elif isinstance(i, list):
+        i.append(v)
     # si la valeur est de type str()
-    elif isinstance(i, str): i += str(v)
+    elif isinstance(i, str):
+        i += str(v)
     # si la valeur est de type int()
-    elif isinstance(i, int): i += int(v)
+    elif isinstance(i, int):
+        i += int(v)
     # si la valeur est de type float()
-    elif isinstance(i, float): i += float(v)
+    elif isinstance(i, float):
+        i += float(v)
     # on met à jour l'objet 'i' pour la clé 'k' dans le dictionnaire 'd'
     d[k] = i
     # on retourne le dictionnaire 'd'
@@ -75,9 +81,10 @@ def lire_fichier(fichier: str) -> list:
     :param fichier:
     :return: liste contenant le texte
     """
-    with open(fichier, "r") as fopen():
-        liste = []
-        liste = fopen.rstrip()
+    with open(fichier, "r") as fopen:
+        fopen.rstrip()
+        liste = set(list)
+        liste = fopen.readlines()
         return liste
 
 
@@ -89,12 +96,16 @@ def occurrence(texte: str) -> dict:
     :param texte: le texte crypté en MAJUSCULES
     :return: un dictionnaire
     """
-    with open(encryptedfile, "r") as fopen():
-        rstrip()
+    with open(texte, "r") as fopen:
+        fopen.rstrip()
+        fopen.upper()
+        occurence = {}
+        for i in range(fopen.lines()):
+            pass
     pass
 
 
-def maxi(ASCIIrandom: dict) -> str:
+def maxi(occurence: dict) -> str:
     """
     Fonction qui renvoie la lettre ayant la plus grande occurence
     des lettres du dictionnaire
@@ -123,6 +134,7 @@ def permute(ASCIIrandom: dict, l1: str, l2: str) -> dict:
     :param l2: lettre en MAJUSCULE
     :return: le nouveau dictionnaire
     """
+    pass
 
 
 """
