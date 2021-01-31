@@ -1,37 +1,7 @@
 import random
 
 
-def AddValueToDict(k, d, v, i):
-    """
-    k = key - d = dict - v = value - i = type value
-    si le dictionnaire 'd' contient la clé 'k'
-    on récupère la valeur
-    """
-    if k in d:
-        i = d[k]
-    # détermination du type de la valeur
-    # si la valeur est de type set()
-    if isinstance(i, set):
-        i.add(v)
-    # si la valeur est de type list()
-    elif isinstance(i, list):
-        i.append(v)
-    # si la valeur est de type str()
-    elif isinstance(i, str):
-        i += str(v)
-    # si la valeur est de type int()
-    elif isinstance(i, int):
-        i += int(v)
-    # si la valeur est de type float()
-    elif isinstance(i, float):
-        i += float(v)
-    # on met à jour l'objet 'i' pour la clé 'k' dans le dictionnaire 'd'
-    d[k] = i
-    # on retourne le dictionnaire 'd'
-    return d
-
-
-def ASCIIrandom_alea() -> dict:
+def dico_alea() -> dict:
     """
     Fonction qui construit un dictionnaire de codage
     à chaque lettre MAJUSCULE de l'alphabet on fait correspondre
@@ -39,31 +9,24 @@ def ASCIIrandom_alea() -> dict:
     :return: un dictionnaire ex : {'A': 'D', 'B': 'Y'....}
     """
     ASCII = [chr(i) for i in range(65, 91)]
-    ASCIIrandom = {}
+    dic = {}
     random.shuffle(ASCII)
-
     for i in range(0, 26):
-        ASCIIrandom[chr(i+65)] = ASCII[i]
-    return ASCIIrandom
+        dic[chr(i+65)] = ASCII[i]
+    return dic
 
 
-def crypto_lettre(ASCIIrandom: dict, lettre: str) -> str:
+def crypto_lettre(dico: dict, lettre: str) -> str:
     """
     Fonction qui renvoie une lettre cryptée d'après le dictionnaire associé
     :param ASCIIrandom:
     :param lettre: lettre MAJUSCULE
     :return: la lettre cryptée en MAJUSCULE
     """
-    texte = ""
-    for k in range(len(lettre)):
-        if lettre[k] in ASCIIrandom.items():
-            texte = texte + ASCIIrandom[lettre[k]]
-        else:
-            texte = texte + lettre[k]
-    return texte
+    return dico[lettre]
 
 
-def crypto_texte(ASCIIrandom: dict, texte: str) -> str:
+def crypto_texte(dico: dict, texte: str) -> str:
     """
     Fonction qui renvoie un texte crypté à partir du texte entré et
     du dictionnaire associé
@@ -72,9 +35,15 @@ def crypto_texte(ASCIIrandom: dict, texte: str) -> str:
     :param texte: texte en MAJUSCULES
     :return: le texte crypté en MAJUSCULES
     """
-    pass
+    t = ""
+    for lettre in texte:
+        if lettre in dico.keys():
+            t += crypto_lettre(dico, lettre)
+        else:
+            t += lettre
 
 
+# file write function
 def lire_fichier(fichier: str) -> list:
     """
     Fonction qui renvoie une liste après lecture d'un fichier texte
@@ -82,8 +51,8 @@ def lire_fichier(fichier: str) -> list:
     :return: liste contenant le texte
     """
     with open(fichier, "r") as fopen:
-        fopen.rstrip()
-        liste = set(list)
+        # fopen.rstrip()
+        liste = list()
         liste = fopen.readlines()
         return liste
 
@@ -96,13 +65,19 @@ def occurrence(texte: str) -> dict:
     :param texte: le texte crypté en MAJUSCULES
     :return: un dictionnaire
     """
+    occurence = dict()
+    for i in range(65, 91):
+        occurence[chr(i)] = 0
     with open(texte, "r") as fopen:
         fopen.rstrip()
         fopen.upper()
-        occurence = {}
-        for i in range(fopen.lines()):
+        pass
+    for lettre in texte:
+        if lettre in occurence:
+            occurence[lettre] += 1
+        else:
             pass
-    pass
+    return occurence
 
 
 def maxi(occurence: dict) -> str:
@@ -137,20 +112,13 @@ def permute(ASCIIrandom: dict, l1: str, l2: str) -> dict:
     pass
 
 
-"""
-#programme principal
-table = lire_fichier("texte.txt")
+# programme principal
+table = lire_fichier(input("file path ? (including extension like .txt) : "))
 d = propose(table)
 print(d)
 print(crypto_texte(d, table))
-permute(d,"N","L")
-permute(d,"H","B")
-permute(d,"H","G")
-permute(d,"L","U")
-permute(d,"Q","H")
-print()
-print(crypto_texte(d, table))
-"""
-# DEBUG: use pass to disable
-print(crypto_lettre(ASCIIrandom_alea(), "Bonjour, A B C".upper()))
-print(lire_fichier(input("file path ? (including extension like .txt) : ")))
+permute(d, "N", "L")
+permute(d, "H", "B")
+permute(d, "H", "G")
+permute(d, "L", "U")
+permute(d, "Q", "H")
