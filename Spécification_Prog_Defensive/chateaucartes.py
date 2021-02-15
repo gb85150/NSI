@@ -8,7 +8,7 @@ def nbr_cartes(etages: int) -> int:
     """
     assert etages >= 1, "le nombre d'étages doit être un entier positif"
     somme = 0
-    for i in range(1,etages+1):
+    for i in range(1, etages+1):
         somme = somme + i * 3 - 1
         numetage = i
     assert somme > 1, "Erreur de calcul de somme"
