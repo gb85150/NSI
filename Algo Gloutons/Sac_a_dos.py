@@ -1,3 +1,16 @@
+def remplissage(input: list, maxcapacity: int):
+    bag = []
+    maxcapacity = 40
+    capacity = maxcapacity
+    for i in bestbutin:
+        if i['weight'] < capacity:
+            bag.append(i)
+            capacity = capacity - i['weight']
+        for i in bag:
+            print(i, flush=True)
+    print(len(bag))
+
+
 butin = [
     {'name': 'object1', 'weight': 15, 'value': 500},
     {'name': 'object2', 'weight': 24, 'value': 400},
@@ -7,13 +20,6 @@ butin = [
     {'name': 'object6', 'weight': 12, 'value': 800},
     {'name': 'object7', 'weight': 2, 'value': 1400},
     {'name': 'object8', 'weight': 18, 'value': 550},
-]
-bag = []
-max.capacity = 40
-bestbutin = sorted(butin, key=(lambda x: x['value'] / x['weight']))
-capacity = max.capacity
-for i in bestbutin:
-    if i['weight'] < capacity:
-        bag.append(bestbutin[i])
-        capacity = capacity - bestbutin[i['weight']]
-print(bag, flush=True)
+    ]
+bestbutin = sorted(butin, key=(lambda x: x['value'] / x['weight']), reverse=True)
+remplissage(bestbutin, 40)

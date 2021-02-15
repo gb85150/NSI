@@ -1,0 +1,15 @@
+def remplissage(input: list, maxcapacity: int):
+    """
+    Sélectionne une quantitée d'objets en fonction de leur valeur et
+    de la capacitée de sortie
+    :param input: L'entrée au format list de dict
+    :result output: la sortie triée au format list de dict
+    """
+    bag = []
+    bestbutin = sorted(input, key=(lambda x: x['value'] / x['weight']))
+    capacity = maxcapacity
+    for i in bestbutin:
+        if i['weight'] < capacity:
+            bag.append(bestbutin[i])
+            capacity = capacity - bestbutin[i['weight']]
+    return bag
