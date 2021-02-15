@@ -5,11 +5,3 @@ def remplissage(input: list, maxcapacity: int):
     :param input: L'entrée au format list de dict
     :result output: la sortie triée au format list de dict
     """
-    bag = []
-    bestbutin = sorted(input, key=(lambda x: x['value'] / x['weight']))
-    capacity = maxcapacity
-    for i in bestbutin:
-        if i['weight'] < capacity:
-            bag.append(bestbutin[i])
-            capacity = capacity - bestbutin[i['weight']]
-    return bag

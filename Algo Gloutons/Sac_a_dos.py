@@ -2,7 +2,7 @@ def remplissage(input: list, maxcapacity: int):
     bag = []
     maxcapacity = 40
     capacity = maxcapacity
-    for i in bestbutin:
+    for i in input:
         if i['weight'] < capacity:
             bag.append(i)
             capacity = capacity - i['weight']
