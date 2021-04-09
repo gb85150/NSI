@@ -1,0 +1,7 @@
+def remplissage(input: list, maxcapacity: int):
+    """
+    Sélectionne une quantitée d'objets en fonction de leur valeur et
+    de la capacitée de sortie
+    :param input: L'entrée au format list de dict
+    :result output: la sortie triée au format list de dict
+    """

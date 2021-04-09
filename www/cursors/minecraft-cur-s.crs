@@ -1,0 +1,45 @@
+﻿[Arrow]
+Path=Diamond Sword - Normal Select.cur
+
+[Wait]
+Path=Breaking MineCraft - Busy.ani
+
+[No]
+Path=Compass - Unavailable.ani
+
+[UpArrow]
+Path=Diamond Pickaxe - Alternate select.cur
+
+[AppStarting]
+Path=Diamond Sword with damage bar - Working in BG.ani
+
+[Hand]
+Path=Gold Sword - Link.cur
+
+[IBeam]
+Path=Arrow - Text.ani
+
+[Crosshair]
+Path=MineCraft Sight - Precision Select.cur
+
+[SizeNWSE]
+Path=RedStone - Diagonal-1 Resize.cur
+
+[SizeNESW]
+Path=RedStone - Diagonal-2 Resize.cur
+
+[SizeWE]
+Path=RedStone - Horizontal Resize.cur
+
+[SizeNS]
+Path=RedStone - Vertical Resize.cur
+
+[SizeAll]
+Path=RedStone - Move.cur
+
+[Help]
+Path=Sign Colors - Help.ani
+
+[NWPen]
+Path=Stick - Handwriting-1.cur
+

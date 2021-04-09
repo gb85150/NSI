@@ -1,0 +1,29 @@
+/*main style*/
+
+.maintitle {
+  color:red;
+  font-weight:bold;
+  text-align:center;
+}
+h1,
+h2,
+h3 {
+  font-size: 1;
+  font-family: Comic Sans MS;
+  color: red;
+}
+
+p {
+  background-color: white;
+  opacity:
+}
+
+body {
+    cursor: cursors/Diamond Sword - Normal Select.cur
+}
+
+aside {
+  padding-right: 10%;
+  padding: 10px;
+  text-align: center;
+}
