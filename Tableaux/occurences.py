@@ -1,8 +1,8 @@
-from random import randint
+from custom_count import count
 
 
 def occurences(v, t):
-    return(t.count(v))
+    return(count(v, t))
 
 
 v = int(input("occurance à checker ? "))
