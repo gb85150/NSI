@@ -7,6 +7,8 @@
 <hr>
 <p>Ceci est la page web du repository github NSI.<br>
 Ce site est toujours en construction et risque de changer au cours des prochains mois mais vous pourrez voir ici éventuellement des projets majeurs</p>
+---
+<b><h3>Projet en cours : Tkinter</h3></b>
 
 <div id="disqus_thread"></div>
 <script>
