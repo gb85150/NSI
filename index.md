@@ -12,7 +12,7 @@ Ce site est toujours en construction et risque de changer au cours des prochains
   <h3>Projet en cours : Tkinter</h3>
 </b>
 <div id="project_overview">
-  <script src="http://gist-it.appspot.com/https://github.com/gb85150/NSI/blob/master/tkter/Ex2.py"></script>
+  <script src="http://gist-it.appspot.com/http://github.com/gb85150/NSI/blob/master/tkter/Ex2.py"></script>
 </div>
 <div id="disqus_thread"></div>
 <script>
