@@ -4,7 +4,7 @@ from tkinter import messagebox
 
 def askquit():
     if messagebox.askokcancel("Quit", "J'adore les popups"):
-        fen1.destroy
+        fen1.destroy()
 
 
 fen1 = tk.Tk()
