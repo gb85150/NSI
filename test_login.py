@@ -2,6 +2,13 @@ import requests
 
 
 def GetToken():
+    data = login()
+    dict(data)
+    token = data["token"]
+    return token
+
+
+def login():
     Email = str(input("Email adress ? : "))
     Password = str(input("Password ? : "))
     url = "https://api.ecoledirecte.com/v3/login.awp"
@@ -10,7 +17,7 @@ def GetToken():
     headers = {}
     print(payload)
     response = requests.request("POST", url, headers=headers, data=payload)
-
+    print(response.text)
     return response.text
 
 

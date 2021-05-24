@@ -1,3 +1,5 @@
+# Defining variables
+import test_login, test_gethomework
 TOKEN = 0
 TRUE = True
 FALSE = False
@@ -42,3 +44,6 @@ DICO = {
             ]
          }
         }
+
+
+test_login.GetToken()
