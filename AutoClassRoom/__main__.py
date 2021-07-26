@@ -1,5 +1,6 @@
 import os
 import platform
+import csv
 
 
 def clearconsole():
@@ -26,7 +27,7 @@ print("""
 ===      /:/  /       \::/  /                     \::/  /       \:\__\        \:\__\     /:/  /       \::/  /     ===
 ===      \/__/         \/__/                       \/__/         \/__/         \/__/     \/__/         \/__/      ===
 ===                                                                                                               ===
-===                                                 Classroom resolver                                            ===
+===                                              CLASSROOM RESOLVER                                               ===
 =====================================================================================================================
 =====================================================================================================================
 """)
@@ -37,18 +38,19 @@ Pour connaître votre Classe, merci de fournir les données demandées ci-après
 
 CODE Spés :
 
- - NSI     = Numérique et Sciences de l'Informatique
- - HGGSP   = Histoire Géographie Géopolitique et Sciences Politiques
- - HLP     =
- - SI      = Sciences de l'Ingénieur
- - SES     = Sciences économiques et sociales
- - MATHS   = Mathématiques
- - LLCE    = Anglais
- - PC      = Physique Chimie
- - SVT     = Sciences de la Vie et de la Terre
- - AR_P    = Arts Plastiques
- - MUSIC   = Musique
- - THEATRE = Théâtre
+ - NSI      = Numérique et Sciences de l'Informatique
+ - HGGSP    = Histoire Géographie Géopolitique et Sciences Politiques
+ - HLP      =
+ - SI       = Sciences de l'Ingénieur
+ - SES      = Sciences économiques et sociales
+ - MATHS    = Mathématiques
+ - LLCE_ENG = Anglais
+ - LLCE_ESP = Espagnol
+ - PC       = Physique Chimie
+ - SVT      = Sciences de la Vie et de la Terre
+ - ART_P    = Arts Plastiques
+ - MUSIC    = Musique
+ - THEATRE  = Théâtre
 
 """)
 input("[Press Enter to continue.]")
@@ -71,13 +73,12 @@ CODE Options (Faculatif/Non implémenté) :
  - MATHSEXPERT
  - MATHSCOMP
  - DGEMC
- - EPS
  - EUROENG
  - EUROALL
- - ARTP
+ - ART_P
  - MUSIC
  - THEATRE
- - CHINOIS
+ - CHI3
  - LATIN
  - GREC
  
@@ -85,6 +86,15 @@ Merci d'indiquer ces codes pour chaque question
 """)
 input("Press Enter to continue.")
 
+
+with open("classes.csv", "r") as fichier:
+    table = csv.reader(fichier)
+    t = []
+    entete = []
+    for ligne in table:
+        t.append(tuple(ligne[0], ligne[1]))
+        entete.append(table[0])
+        t.remove(0)
 
 SPE1 = input("Spécialité 1 : ")
 SPE2 = input("Spécialité 2 : ")
