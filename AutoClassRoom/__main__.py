@@ -90,7 +90,7 @@ Merci d'indiquer ces codes pour chaque question
 
 
 # Pas fini
-def loadcsv(file="classe.csv"):
+def loadcsv(file="classes.csv"):
     with open(file, "r") as fichier:
         rawdata = csv.reader(fichier)
         classe = 0
@@ -110,9 +110,9 @@ def getinfo():
     return SPE1, SPE2, LANG
 
 
-def findclass(classe, SPE1, SPE2, LANG, classeeleve=None):
+def findclass(classe, spe1, spe2, lang, classeeleve=None):
     for i in classe:
-        if SPE1 in classe[i] and SPE2 in classe[i] and LANG in classe[i]:
+        if spe1 in classe[i] and spe2 in classe[i] and lang in classe[i]:
             classeeleve = i
             return classeeleve
         else:
@@ -121,9 +121,9 @@ def findclass(classe, SPE1, SPE2, LANG, classeeleve=None):
 
 
 def fetchclassletter(classeeleve):
-    listletters = ["a","b","c","d","e","f","g","h","i","j"]
+    listletters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     lettreclasse = listletters[classeeleve]
-    return  lettreclasse
+    return lettreclasse
 
 
 printinfo()
