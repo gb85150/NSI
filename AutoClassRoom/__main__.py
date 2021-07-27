@@ -89,25 +89,25 @@ Merci d'indiquer ces codes pour chaque question
     return None
 
 
-# Pas fini
-def loadcsv(file="classes.csv"):
+# Bug
+def loadcsv(file):
     with open(file, "r") as fichier:
-        rawdata = csv.reader(fichier)
-        classe = 0
-        for x in rawdata:
-            classe.append(x)
-    return classe
+        rawdata = csv.reader(fichier, delimiter=';')
+        output = list
+        for i in rawdata:
+            output.append(i)
+    return output
 
 
 # Fini (pour l'instant)
 def getinfo():
-    SPE1 = input("Spécialité 1 : ")
-    SPE2 = input("Spécialité 2 : ")
-    LANG = input("Langue Additionnelle : ")
-    SPE1.upper()
-    SPE2.upper()
-    LANG.upper()
-    return SPE1, SPE2, LANG
+    spe1 = input("Spécialité 1 : ")
+    spe2 = input("Spécialité 2 : ")
+    lang = input("Langue Additionnelle : ")
+    spe1.upper()
+    spe2.upper()
+    lang.upper()
+    return spe1, spe2, lang
 
 
 def findclass(classe, spe1, spe2, lang, classeeleve=None):
@@ -123,15 +123,16 @@ def findclass(classe, spe1, spe2, lang, classeeleve=None):
 def fetchclassletter(classeeleve):
     listletters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     lettreclasse = listletters[classeeleve]
-    return lettreclasse
+    return lettreclasse.upper()
 
 
-printinfo()
-loadcsv()
-getinfo()
-findclass(classe, SPE1, SPE2, LANG)
-print(fetchclassletter())
-
+# printinfo()
+# CLASSE = loadcsv("classesptvirgule.csv")
+print(loadcsv("speech.csv"))
+# print(CLASSE)
+# INFO = getinfo()
+# CLASSEELEVE = findclass(CLASSE, INFO[0], INFO[1], INFO[2])
+# print(fetchclassletter(CLASSEELEVE))
 
 # print(SPE1)
 # print(SPE2)
