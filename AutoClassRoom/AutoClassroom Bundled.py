@@ -1,9 +1,22 @@
+# All rights are reserved by gb85 for this script
+# THIS SOFT IS DISTRIBUTED WITHOUT ANY WARRANTY
 import os
 import platform
 import time
 
 
-def clearconsole():
+def clearconsole() -> None:
+    """
+    FR :
+    Fonction Basique permettant l'effacement de la console,
+    Compatible Windows/DOS, Linux, MacOS
+    Elle émule l'envoi d'une commande d'effacement dans le terminal.
+
+    EN :
+    Basic function allowing the erasing of the console,
+    Compatible with Windows/DOS, Linux, MacOS
+    It emulates the sending of a delete command in the terminal.
+    """
     command = 'clear'
     if platform.system() == 'Windows':  # If Machine is running on Windows, use cls
         command = 'cls'
@@ -13,13 +26,27 @@ def clearconsole():
     return None
 
 
-def fetchclassletter(classeeleve):
+def fetchclassletter(classeeleve) -> str:
+    """
+    FR :
+    Fonction permettant de retrouver la lettre correspondante à son index.
+
+    EN :
+    Function to find the letter corresponding to its index.
+    """
     listletters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     lettreclasse = listletters[classeeleve]
     return lettreclasse.upper()
 
 
-def newprint(speech: int):
+def newprint(speech: int) -> None:
+    """
+    FR :
+    Méthode d'affichage moderne développée par mes soins pour permettre un Affichage simple des informations.
+
+    EN :
+    Modern display method developed by me to allow a simple display of information.
+    """
     content = [
         "=====================================================================================================================\n=====================================================================================================================\n===       ___           ___           ___           ___           ___           ___       ___           ___       ===\n===      /\  \         /\__\         /\  \         /\  \         /\  \         /\__\     /\  \         /\  \      ===\n===     /::\  \       /:/  /         \:\  \       /::\  \       /::\  \       /:/  /    /::\  \       /::\  \     ===\n===    /:/\:\  \     /:/  /           \:\  \     /:/\:\  \     /:/\:\  \     /:/  /    /:/\:\  \     /:/\ \  \    ===\n===   /::\~\:\  \   /:/  /  ___       /::\  \   /:/  \:\  \   /:/  \:\  \   /:/  /    /::\~\:\  \   _\:\~\ \  \   ===\n===  /:/\:\ \:\__\ /:/__/  /\__\     /:/\:\__\ /:/__/ \:\__\ /:/__/ \:\__\ /:/__/    /:/\:\ \:\__\ /\ \:\ \ \__\  ===\n===  \/__\:\/:/  / \:\  \ /:/  /    /:/  \/__/ \:\  \ /:/  / \:\  \  \/__/ \:\  \    \/__\:\/:/  / \:\ \:\ \/__/  ===\n===       \::/  /   \:\  /:/  /    /:/  /       \:\  /:/  /   \:\  \        \:\  \        \::/  /   \:\ \:\__\    ===\n===       /:/  /     \:\/:/  /     \/__/         \:\/:/  /     \:\  \        \:\  \       /:/  /     \:\/:/  /    ===\n===      /:/  /       \::/  /                     \::/  /       \:\__\        \:\__\     /:/  /       \::/  /     ===\n===      \/__/         \/__/                       \/__/         \/__/         \/__/     \/__/         \/__/      ===\n===                                                                                                               ===\n===                                              CLASSROOM RESOLVER                                               ===\n=====================================================================================================================\n=====================================================================================================================",
         "CODE Spés :\n\n - NSI      = Numérique et Sciences de l'Informatique\n - HGGSP    = Histoire Géographie Géopolitique et Sciences Politiques\n - HLP      =\n - SI       = Sciences de l'Ingénieur\n - SES      = Sciences économiques et sociales\n - MATHS    = Mathématiques\n - LLCE_ENG = Anglais\n - LLCE_ESP = Espagnol\n - PC       = Physique Chimie\n - SVT      = Sciences de la Vie et de la Terre\n - ART_P    = Arts Plastiques\n - MUSIC    = Musique\n - THEATRE  = Théâtre",
@@ -37,6 +64,15 @@ def newprint(speech: int):
 
 
 def getinfo() -> tuple:
+    """
+    FR :
+    Fonction de récupération des informations de l'élève,
+    elle appelle également newprint() pour l'affichage des informations.
+
+    EN :
+    Function to retrieve the student's information,
+    it also calls newprint() to display the information.
+    """
     newprint(0)
     wait()
     newprint(1)
@@ -49,6 +85,13 @@ def getinfo() -> tuple:
 
 
 def wait() -> None:
+    """
+    FR :
+    Fonction permettant de placer un délai matérialisé par une barre de progression.
+
+    EN :
+    Function allowing to place a delay materialized by a progress bar.
+    """
     progress = [
         "[                                                  ] 0%",
         "[==========                                        ] 20%",
@@ -69,6 +112,15 @@ def wait() -> None:
 
 
 def findclass(spe1: str, spe2: str, lang: str) -> int:
+    """
+    FR :
+    Le coeur du programme :
+    Il permet de retrouver la classe de l'élève en comparant les données fournies avec celles de la base de données.
+
+    EN :
+    Core of the program:
+    It finds the student's class by comparing the data provided with the data in the database.
+    """
     found = False
     classe = [
         ["ESP", "ALL", "HLP", "LLCE_ENG", "MATHS", "NSI", "PC", "SVT", "SES", "HGGSP", "THEATRE", "ART_Pop", "CHI3", "MUSICop", "THEATREop", "ART_Pop", "EUROENG", None, None, None],
@@ -84,13 +136,14 @@ def findclass(spe1: str, spe2: str, lang: str) -> int:
     ]
     for i in range(len(classe)):
         classe[i] = classe[i]
-        print(classe[i])
         if spe1 in classe[i] and spe2 in classe[i] and lang in classe[i]:
             classeeleve = i
             return classeeleve
-    exit("findclass : Fetching Failed ! Please make sure you gave the right answers")
+    exit("findclass : Fetching Failed ! Please make sure you gave the right answers \n findclass : Echec de la recherche ! Veuillez vous assurer que vous avez donné les bonnes réponses")
 
 
+# Functions Calls
 INFO = getinfo()
 CLASSEELEVE = findclass(INFO[0], INFO[1], INFO[2])
-print(fetchclassletter(CLASSEELEVE))
+print(f"Ta classe est la Terminale {fetchclassletter(CLASSEELEVE)} !")
+print(f"Your class is the Terminale {fetchclassletter(CLASSEELEVE)} !")

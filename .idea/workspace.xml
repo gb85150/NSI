@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="1st pre-release !">
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Little patch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoClassRoom/AutoClassroom Bundled.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoClassRoom/AutoClassroom Bundled.py" afterDir="false" />
     </list>
@@ -105,7 +105,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="1" Folder0="Z:\NSI 1ère\NSI" CustomDictionaries="1" CustomDictionary0="Z:\NSI 1ère\NSI\french.dic" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="" />
@@ -121,7 +121,7 @@
       <workItem from="1627431529373" duration="932000" />
       <workItem from="1627488638109" duration="3856000" />
       <workItem from="1627565888840" duration="5443000" />
-      <workItem from="1627638439643" duration="6208000" />
+      <workItem from="1627638439643" duration="9130000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627655615431</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Little patch">
+      <created>1627666827365</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1627666827365</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,10 +227,11 @@
     <MESSAGE value="Specifications and new print system" />
     <MESSAGE value="Last dev version - Big changes approaching..." />
     <MESSAGE value="1st pre-release !" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st pre-release !" />
+    <MESSAGE value="Little patch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little patch" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NSI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1627568413861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
-    <SUITE FILE_PATH="coverage/NSI$AutoClassroom_Bundled.coverage" NAME="AutoClassroom Bundled Coverage Results" MODIFIED="1627665806669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
+    <SUITE FILE_PATH="coverage/NSI$AutoClassroom_Bundled.coverage" NAME="AutoClassroom Bundled Coverage Results" MODIFIED="1627685233073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
   </component>
 </project>
