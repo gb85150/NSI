@@ -41,9 +41,9 @@ def getinfo() -> tuple:
     wait()
     newprint(1)
     spe1 = input("Spécialité 1 : ").upper()
-    newprint(2)
+    newprint(1)
     spe2 = input("Spécialité 2 : ").upper()
-    newprint(3)
+    newprint(2)
     lang = input("Langue Additionnelle : ").upper()
     return spe1, spe2, lang
 
@@ -51,16 +51,18 @@ def getinfo() -> tuple:
 def wait() -> None:
     progress = [
         "[                                                  ] 0%",
-        "[==========                                        ] 10%",
-        "[====================                              ] 20%",
-        "[==============================                    ] 30%",
-        "[========================================          ] 40%",
-        "[==================================================] 50%",
+        "[==========                                        ] 20%",
+        "[====================                              ] 40%",
+        "[==============================                    ] 60%",
+        "[========================================          ] 80%",
+        "[==================================================] 100%",
     ]
     print("Please wait...")
     print(progress[0])
+    time.sleep(5)
+    clearconsole()
     for i in range(1, 6):
-        time.sleep(1)
+        time.sleep(2)
         clearconsole()
         print(progress[i])
     return None
