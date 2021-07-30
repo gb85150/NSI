@@ -91,35 +91,36 @@ Merci d'indiquer ces codes pour chaque question
 
 # Bug
 def loadcsv(file: str) -> list:
-    with open(file, "r") as fichier:
+    with open(file, "r", encoding="utf-8") as fichier:
         rawdata = csv.reader(fichier, delimiter=';')
-        output = list
+        output = []
         for i in rawdata:
-            print(i)
-            output.append(list(i))
+            # print(i)
+            output.append(i)
+    fichier.close()
     return output
 
 
 # Fini (pour l'instant)
 def getinfo() -> tuple:
-    spe1 = input("Spécialité 1 : ")
-    spe2 = input("Spécialité 2 : ")
-    lang = input("Langue Additionnelle : ")
-    spe1.upper()
-    spe2.upper()
-    lang.upper()
+    spe1 = input("Spécialité 1 : ").upper()
+    spe2 = input("Spécialité 2 : ").upper()
+    lang = input("Langue Additionnelle : ").upper()
     return spe1, spe2, lang
 
 
 # Fini/Non testé
-def findclass(classe: list, spe1: str, spe2: str, lang: str, classeeleve=None) -> int:
-    for i in range(classe):
+def findclass(classe: list, spe1: str, spe2: str, lang: str) -> int:
+    found = False
+    for i in range(len(classe)):
+        classe[i] = classe[i]
+        print(classe[i])
         if spe1 in classe[i] and spe2 in classe[i] and lang in classe[i]:
             classeeleve = i
+            found = True
             return classeeleve
-        else:
-            exit("findclass : Fetching Failed ! Please make sure you gave the right answers")
-            break
+    if not found:
+        exit("findclass : Fetching Failed ! Please make sure you gave the right answers")
 
 
 # Fini/Non testé
@@ -138,22 +139,24 @@ def newprint(speech: int):
                "CODE Langues :\nEtant donné qu'une erreur a probablement été effectuée lors des réglages des groupes de langues,\naucune différence sera faite entre LV1 et LV2.\n\n - ALL = Allemand\n - ESP = Espagnol\n - CHI = Chinois",
                "CODE Options (Faculatif/Non implémenté) :\n - MATHSEXPERT\n - MATHSCOMP\n - DGEMC\n - EUROENG\n - EUROALL\n - ART_P\n - MUSIC\n - THEATRE\n - CHI3\n - LATIN\n - GREC"]
     '''
-    if speech >= 1:
+    if speech <= 1:
         clearconsole()
-        print(content[speech])
+        toprint = content[speech][0].strip()
+        print(toprint.replace('\\n', '\n'))
     else:
         clearconsole()
         print("Merci de répondre avec le code correspondant")
-        print(content[speech])
+        print(content[speech][0])
     return None
 
 
+newprint(1)
 # printinfo()
-# CLASSE = loadcsv("classesptvirgule.csv")
-print(loadcsv("classesptvirgule.csv"))
+CLASSE = loadcsv("classevertical.csv")
+INFO = getinfo()
+CLASSEELEVE = findclass(CLASSE, INFO[0], INFO[1], INFO[2])
+print(CLASSEELEVE)
+print(fetchclassletter(CLASSEELEVE))
+# print(CLASSE[0])
+# print(loadcsv("classevertical.csv"))
 # print(CLASSE)
-# newprint(3)
-
-# INFO = getinfo()
-# CLASSEELEVE = findclass(CLASSE, INFO[0], INFO[1], INFO[2])
-# print(fetchclassletter(CLASSEELEVE))

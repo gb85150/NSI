@@ -17,10 +17,18 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\AutoClassRoom\classevertical.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\AutoClassRoom\speech.csv">
           <value>
             <Attribute>
-              <option name="separator" value=":" />
+              <option name="separator" value=";" />
+              <option name="escapeCharacter" value="&quot;" />
             </Attribute>
           </value>
         </entry>
