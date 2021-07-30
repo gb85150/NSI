@@ -124,7 +124,7 @@ def findclass(classe: list, spe1: str, spe2: str, lang: str) -> int:
 
 
 # Fini/Non testé
-def fetchclassletter(classeeleve):
+def fetchclassletter(classeeleve: int) -> str:
     listletters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     lettreclasse = listletters[classeeleve]
     return lettreclasse.upper()
@@ -150,6 +150,7 @@ def newprint(speech: int):
     return None
 
 
+"""DEBUG Zone
 newprint(1)
 # printinfo()
 CLASSE = loadcsv("classevertical.csv")
@@ -160,3 +161,4 @@ print(fetchclassletter(CLASSEELEVE))
 # print(CLASSE[0])
 # print(loadcsv("classevertical.csv"))
 # print(CLASSE)
+"""

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Specifications and new print system">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/highlightedFiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Last dev version - Big changes approaching...">
+      <change afterPath="$PROJECT_DIR$/AutoClassRoom/AutoClassroom Bundled.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoClassRoom/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoClassRoom/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoClassRoom/classesptvirgule.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AutoClassRoom/classesptvirgule.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoClassRoom/output-onlinecsvtools.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AutoClassRoom/classevertical.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoClassRoom/speech.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AutoClassRoom/speech.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,29 @@
       <recent name="Z:\NSI 1ère\NSI\AutoClassRoom" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.AutoClassroom Bundled">
+    <configuration name="AutoClassroom Bundled" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="NSI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoClassRoom" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoClassRoom/AutoClassroom Bundled.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NSI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,6 +116,7 @@
       <workItem from="1627431529373" duration="932000" />
       <workItem from="1627488638109" duration="3856000" />
       <workItem from="1627565888840" duration="5443000" />
+      <workItem from="1627638439643" duration="5147000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -156,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627429384664</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Last dev version - Big changes approaching...">
+      <created>1627638572897</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627638572897</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,25 +206,11 @@
     <MESSAGE value="." />
     <MESSAGE value="I tried somethings but this don't fuck want to work (line 98) !" />
     <MESSAGE value="Specifications and new print system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Specifications and new print system" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/AutoClassRoom/__main__.py</url>
-          <line>117</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/AutoClassRoom/__main__.py</url>
-          <line>108</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Last dev version - Big changes approaching..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Last dev version - Big changes approaching..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NSI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1627568413861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
+    <SUITE FILE_PATH="coverage/NSI$AutoClassroom_Bundled.coverage" NAME="AutoClassroom Bundled Coverage Results" MODIFIED="1627641176101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
   </component>
 </project>
