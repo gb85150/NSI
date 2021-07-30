@@ -121,7 +121,6 @@ def findclass(spe1: str, spe2: str, lang: str) -> int:
     Core of the program:
     It finds the student's class by comparing the data provided with the data in the database.
     """
-    found = False
     classe = [
         ["ESP", "ALL", "HLP", "LLCE_ENG", "MATHS", "NSI", "PC", "SVT", "SES", "HGGSP", "THEATRE", "ART_Pop", "CHI3", "MUSICop", "THEATREop", "ART_Pop", "EUROENG", None, None, None],
         ["ESP", "HGGSP", "HLP", "LLCE_ENG", "SVT", "SES", "MUSIC", "THEATRE", "ART_P", "CHI3", "MUSICop", "THEATREop", "EUROENG", None, None, None, None, None, None, None],
