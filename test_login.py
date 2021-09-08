@@ -3,7 +3,6 @@ import requests
 
 def GetToken():
     data = login()
-    dict(data)
     token = data["token"]
     return token
 
