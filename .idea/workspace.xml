@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="[Tests OK]&#10;Traduction et description des fonctions">
-      <change beforePath="$PROJECT_DIR$/.idea/highlightedFiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/highlightedFiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoClassRoom/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoClassRoom/__main__.py" afterDir="false" />
-    </list>
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="[Tests OK]&#10;Sync btw production and dev scripts." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +39,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/AutoClassRoom/__main__.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -86,6 +82,9 @@
       <module name="NSI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoClassRoom" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -123,7 +122,9 @@
       <workItem from="1627431529373" duration="932000" />
       <workItem from="1627488638109" duration="3856000" />
       <workItem from="1627565888840" duration="5443000" />
-      <workItem from="1627638439643" duration="9691000" />
+      <workItem from="1627638439643" duration="10405000" />
+      <workItem from="1630461046772" duration="194000" />
+      <workItem from="1630461258354" duration="154000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -209,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627686740266</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[Tests OK]&#10;Sync btw production and dev scripts.">
+      <created>1627687302491</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1627687302491</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +246,8 @@
     <MESSAGE value="1st pre-release !" />
     <MESSAGE value="Little patch" />
     <MESSAGE value="[Tests OK]&#10;Traduction et description des fonctions" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Tests OK]&#10;Traduction et description des fonctions" />
+    <MESSAGE value="[Tests OK]&#10;Sync btw production and dev scripts." />
+    <option name="LAST_COMMIT_MESSAGE" value="[Tests OK]&#10;Sync btw production and dev scripts." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NSI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1627568413861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
