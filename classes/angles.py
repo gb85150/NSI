@@ -7,15 +7,15 @@ class Angles()
         if __angle >= 360:
             __angle %= 360
 
-    def getangle(self):
+    def getAngle(self):
         return "L'angle fait {} degrés".format(self.__angle)
 
-    def setangle(self, angle):
+    def setAngle(self, angle):
         self.__angle = angle
         return "Success"
 
-    def getcos(self):
+    def getCos(self):
         return math.cos(self.__angle * math.pi / 180)
 
-    def getsin(self):
-        re
+    def getSin(self):
+        return math.sin(self.__angle * math.pi / 180)
