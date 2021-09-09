@@ -17,3 +17,5 @@ class Angles()
     def getcos(self):
         return math.cos(self.__angle * math.pi / 180)
 
+    def getsin(self):
+        re
