@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="New SFile">
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="z">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/angles.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/angles.py" afterDir="false" />
     </list>
@@ -189,7 +189,8 @@
       <workItem from="1630461258354" duration="154000" />
       <workItem from="1631106784865" duration="3386000" />
       <workItem from="1631169863482" duration="1563000" />
-      <workItem from="1631171917329" duration="1858000" />
+      <workItem from="1631171917329" duration="1976000" />
+      <workItem from="1631173974661" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -303,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631173261431</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="z">
+      <created>1631173926195</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631173926195</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +343,8 @@
     <MESSAGE value="[Tests OK]&#10;Sync btw production and dev scripts." />
     <MESSAGE value="New Structure" />
     <MESSAGE value="New SFile" />
-    <option name="LAST_COMMIT_MESSAGE" value="New SFile" />
+    <MESSAGE value="z" />
+    <option name="LAST_COMMIT_MESSAGE" value="z" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/banque_py$testzone.coverage" NAME="testzone Coverage Results" MODIFIED="1631170392583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />

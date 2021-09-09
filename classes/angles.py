@@ -1,21 +1,21 @@
 import math
 
-class Angles()
 
+class Angles:
     def __init__(self):
         self.__angle = 0
-        if __angle >= 360:
-            __angle %= 360
+        if self.__angle >= 360:
+            self.__angle %= 360
 
-    def getAngle(self):
+    def get_angle(self):
         return "L'angle fait {} degrés".format(self.__angle)
 
-    def setAngle(self, angle):
+    def set_angle(self, angle):
         self.__angle = angle
         return "Success"
 
-    def getCos(self):
+    def get_cos(self):
         return math.cos(self.__angle * math.pi / 180)
 
-    def getSin(self):
+    def get_sin(self):
         return math.sin(self.__angle * math.pi / 180)
