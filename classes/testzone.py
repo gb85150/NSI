@@ -1,15 +1,15 @@
 from banque import BankAccount
 
-DATABASE = [BankAccount.__init__("Neil", 100)]
+database = BankAccount("Neil", 100)
 
 
-def printresume(database=DATABASE):
+def printresume(database=database):
     print("""
     Amount :
-    Name :""".format(BankAccount.get_amount(database[0]), BankAccount.get_name(database[0])))
+    Name :""".format(BankAccount.get_amount(database), BankAccount.get_name(database)))
 
 
-BankAccount.add_and_deposit(50, "-")
+database.add_and_deposit(50, "-")
 printresume()
-BankAccount.rename("Jean")
-BankAccount.add_and_deposit(100, "+")
+database.rename("Jean")
+database.add_and_deposit(100, "+")
