@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Preversion">
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Ajout de mon fichier">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domino/Domino.py" beforeDir="false" afterPath="$PROJECT_DIR$/Domino/Domino.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domino/Geoffrey.py" beforeDir="false" afterPath="$PROJECT_DIR$/Domino/Geoffrey.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +192,7 @@
       <workItem from="1631169863482" duration="1563000" />
       <workItem from="1631171917329" duration="1976000" />
       <workItem from="1631173974661" duration="352000" />
-      <workItem from="1631275702245" duration="1323000" />
+      <workItem from="1631275702245" duration="2050000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -332,7 +334,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631276675438</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Ajout de mon fichier">
+      <created>1631277151443</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1631277151443</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Ajout de mon fichier">
+      <created>1631277260313</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1631277260313</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +384,8 @@
     <MESSAGE value="patch" />
     <MESSAGE value="New project" />
     <MESSAGE value="Preversion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preversion" />
+    <MESSAGE value="Ajout de mon fichier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de mon fichier" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/banque_py$testzone.coverage" NAME="testzone Coverage Results" MODIFIED="1631170392583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
