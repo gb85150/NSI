@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="patch" />
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="patch">
+      <change afterPath="$PROJECT_DIR$/Domino/Domino.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,6 +190,7 @@
       <workItem from="1631169863482" duration="1563000" />
       <workItem from="1631171917329" duration="1976000" />
       <workItem from="1631173974661" duration="352000" />
+      <workItem from="1631275702245" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
