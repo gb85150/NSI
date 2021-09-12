@@ -1,13 +1,13 @@
 # Functions de geoffrey
 def generate(dominos):
-    jeu_dominos = list
+    jeu_dominos = []
     for i in range(28):
-        jeu_dominos += dominos
+        jeu_dominos += dominos[i]
     return jeu_dominos
 
 
 def test_recurrence(dominos):
-    double = list
+    double = []
     for i in range(28):
         if dominos.__A[i] == dominos.__B[i]:
             double += i
