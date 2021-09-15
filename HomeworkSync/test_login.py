@@ -1,3 +1,5 @@
+import getpass
+import json
 import requests
 
 
@@ -9,15 +11,16 @@ def GetToken():
 
 def login():
     Email = str(input("Email adress ? : "))
-    Password = str(input("Password ? : "))
+    Password = str(getpass.getpass(prompt="Password ? : "))
     url = "https://api.ecoledirecte.com/v3/login.awp"
 
     payload = "data={\n\t\"identifiant\": \"" + Email + "\",\n\t\"motdepasse\": \"" + Password + "\"\n}"
     headers = {}
     print(payload)
     response = requests.request("POST", url, headers=headers, data=payload)
-    print(response.text)
-    return response.text
+    data = json.loads(response.text)["token"]
+    print(data)
+    return data
 
 
 print(GetToken())
