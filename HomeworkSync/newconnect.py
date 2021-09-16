@@ -31,7 +31,7 @@ DB = []
 
 
 def newaccount(db: list):
-    swap = Api("01099011109gb", "geoffrey.bousseau@gmail.com")
+    swap = Api()
     db += swap
 
 
