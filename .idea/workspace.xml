@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Avancée sur le projet HomeworkSync">
-      <change afterPath="$PROJECT_DIR$/Question express/Vacancestableronde.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkSync/newconnect.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkSync/newconnect.py" afterDir="false" />
-    </list>
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Vacances" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +34,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Récursivité/initation.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1vpDiNnBsPEKnjF0yJNaDxqGvvF" />
   <component name="ProjectLevelVcsManager">
@@ -74,7 +73,29 @@
       <recent name="Z:\NSI 1ère\NSI\AutoClassRoom" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.newconnect">
+  <component name="RunManager" selected="Python.initation">
+    <configuration name="initation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NSI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Récursivité" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Récursivité/initation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="newconnect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NSI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,7 +112,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HomeworkSync/newconnect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -122,9 +143,11 @@
     <list>
       <item itemvalue="Python.test_login" />
       <item itemvalue="Python.newconnect" />
+      <item itemvalue="Python.initation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.initation" />
         <item itemvalue="Python.newconnect" />
         <item itemvalue="Python.test_login" />
       </list>
@@ -156,7 +179,9 @@
       <workItem from="1631275702245" duration="3083000" />
       <workItem from="1631710987629" duration="545000" />
       <workItem from="1631711692214" duration="4092000" />
-      <workItem from="1631778018389" duration="857000" />
+      <workItem from="1631778018389" duration="1081000" />
+      <workItem from="1632378409820" duration="5004000" />
+      <workItem from="1632487306561" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -340,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631716084428</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Vacances">
+      <created>1631778894363</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1631778894363</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +414,8 @@
     <MESSAGE value="14h57" />
     <MESSAGE value="Restructuration" />
     <MESSAGE value="Avancée sur le projet HomeworkSync" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avancée sur le projet HomeworkSync" />
+    <MESSAGE value="Vacances" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vacances" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/banque_py$testzone.coverage" NAME="testzone Coverage Results" MODIFIED="1631170392583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
@@ -393,7 +426,8 @@
     <SUITE FILE_PATH="coverage/NSI$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1627568413861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
     <SUITE FILE_PATH="coverage/banque_py$banque.coverage" NAME="banque Coverage Results" MODIFIED="1631108895566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
     <SUITE FILE_PATH="coverage/banque_py$angles.coverage" NAME="angles Coverage Results" MODIFIED="1631173539183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
-    <SUITE FILE_PATH="coverage/banque_py$newconnect.coverage" NAME="newconnect Coverage Results" MODIFIED="1631778731646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HomeworkSync" />
+    <SUITE FILE_PATH="coverage/banque_py$newconnect.coverage" NAME="newconnect Coverage Results" MODIFIED="1631778984689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HomeworkSync" />
+    <SUITE FILE_PATH="coverage/banque_py$initation.coverage" NAME="initation Coverage Results" MODIFIED="1632383531739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Récursivité" />
     <SUITE FILE_PATH="coverage/banque_py$TEMP.coverage" NAME="TEMP Coverage Results" MODIFIED="1631107681487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/NSI$AutoClassroom_Bundled.coverage" NAME="AutoClassroom Bundled Coverage Results" MODIFIED="1627685233073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoClassRoom" />
   </component>
