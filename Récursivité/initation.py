@@ -46,12 +46,19 @@ def new_chiffre(n):
     return len(str(n))
 
 
-def palindrome(s):
+def palindrome(s: str) -> None:
+    ls = []
+    for i in range(s):
+        ls.append(i)
     k1=0
-    k2=len(s)
-    if s[k1] == s[k2]:
-        s.pop()
-        s.pop(0)
-        return palindrome(s)
+    k2=len(ls)-1
+    if ls[k1] == ls[k2]:
+        ls.pop()
+        ls.pop(0)
+        print("{} = {}".format(ls[k1], ls[k2]))
+        s=""
+        for i in range(ls):
+            s += i
+        return palindrome(ls)
 print(nb_chiffres(256738648245573256))
-print(new_chiffre(256738648245573256))
+palindrome("kayak")
