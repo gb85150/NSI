@@ -3,8 +3,6 @@
   <component name="ProjectTreeColorHighlighter">
     <files>
       <node color="3" path="$PROJECT_DIR$/AutoClassRoom/AutoClassroom Bundled.py" />
-      <node color="3" path="$PROJECT_DIR$/classes" />
-      <node color="3" path="$PROJECT_DIR$/Domino" />
     </files>
     <colors>
       <color id="1" value="#4f060d" name="Color 1" enabled="true" />
