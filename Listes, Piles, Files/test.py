@@ -9,6 +9,9 @@ class Pile:
         out = self.pile.pop()
         return out
 
+    def __str__(self):
+        return self.pile
+
 
 class File:
     def __init__(self):
@@ -20,9 +23,14 @@ class File:
     def delister(self):
         self.liste.remove(0)
 
+    def __str__(self):
+        return self.liste
+
 
 TABLE = Pile
 LISTE = File
+print(TABLE)
+print(LISTE)
 TABLE.empiler(5)
 print(TABLE.depiler())
 print("================================")

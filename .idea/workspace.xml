@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="ajout mini exos">
-      <change afterPath="$PROJECT_DIR$/Listes, Piles, Files/Initiation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL/Geoffrey BOUSSEAU - Commandes.sqbpro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL/Geoffrey BOUSSEAU - Commandes.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/correction DS/DS1/part1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/correction DS/DS1/part2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/NSI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NSI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/highlightedFiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/highlightedFiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="added test.py" />
     <list id="4b8f2b3f-fbde-41fd-9c5a-ea29d9e8a8fd" name="Changes by sf4086" comment="Changes by sf4086" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\NSI\NSI\Listes, Piles, Files" />
       <recent name="F:\NSI\NSI\1ere" />
       <recent name="Z:\NSI 1ère\NSI\AutoClassRoom" />
     </key>
@@ -247,6 +238,7 @@
       <workItem from="1633588736579" duration="4547000" />
       <workItem from="1633593485826" duration="9000" />
       <workItem from="1634803473004" duration="2659000" />
+      <workItem from="1634908911275" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -458,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632826362147</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added test.py">
+      <created>1634909146102</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1634909146102</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +477,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Ouverture et lecture du csv" />
     <MESSAGE value="[NOT WORKING]&#10;program Alpha&#10;Structure ended" />
     <MESSAGE value="." />
     <MESSAGE value="I tried somethings but this don't fuck want to work (line 98) !" />
@@ -503,7 +501,8 @@
     <MESSAGE value="tkt" />
     <MESSAGE value="ajout mini exos" />
     <MESSAGE value="Changes by sf4086" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by sf4086" />
+    <MESSAGE value="added test.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
