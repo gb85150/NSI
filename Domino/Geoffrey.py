@@ -1,8 +1,11 @@
+
 # Functions de geoffrey
-def generate(dominos):
+def generate(Dominos):
     jeu_dominos = []
-    for i in range(28):
-        jeu_dominos += dominos[i]
+    jeu_dominos.append(Dominos(0,0))
+    for i in range(7):
+      for k in range(i):
+        jeu_dominos.append(Dominos(k, i))
     return jeu_dominos
 
 
