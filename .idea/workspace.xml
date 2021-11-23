@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="added test.py" />
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Some Changes" />
     <list id="4b8f2b3f-fbde-41fd-9c5a-ea29d9e8a8fd" name="Changes by sf4086" comment="Changes by sf4086" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
       <recent name="Z:\NSI 1ère\NSI\AutoClassRoom" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Initiation">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Initiation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NSI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,28 +90,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Listes, Piles, Files/Initiation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="initation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="NSI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="E:\NSI\NSI\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Récursivité" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Récursivité/initation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,6 +142,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NSI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Listes, Piles, Files" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Listes, Piles, Files/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tourdecontrole" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NSI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,19 +187,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.initation" />
       <item itemvalue="Python.tourdecontrole" />
       <item itemvalue="Python.part1" />
       <item itemvalue="Python.part2" />
       <item itemvalue="Python.Initiation" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.Initiation" />
         <item itemvalue="Python.part2" />
         <item itemvalue="Python.part1" />
         <item itemvalue="Python.tourdecontrole" />
-        <item itemvalue="Python.initation" />
       </list>
     </recent_temporary>
   </component>
@@ -239,6 +239,7 @@
       <workItem from="1633593485826" duration="9000" />
       <workItem from="1634803473004" duration="2659000" />
       <workItem from="1634908911275" duration="425000" />
+      <workItem from="1634909455947" duration="841000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
@@ -457,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634909146102</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Some Changes">
+      <created>1634910254550</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1634910254550</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="[NOT WORKING]&#10;program Alpha&#10;Structure ended" />
     <MESSAGE value="." />
     <MESSAGE value="I tried somethings but this don't fuck want to work (line 98) !" />
     <MESSAGE value="Specifications and new print system" />
@@ -502,7 +509,8 @@
     <MESSAGE value="ajout mini exos" />
     <MESSAGE value="Changes by sf4086" />
     <MESSAGE value="added test.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test.py" />
+    <MESSAGE value="Some Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some Changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -541,6 +549,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NSI$test.coverage" NAME="test Coverage Results" MODIFIED="1634910243619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Listes, Piles, Files" />
     <SUITE FILE_PATH="coverage/banque_py$testzone.coverage" NAME="testzone Coverage Results" MODIFIED="1631170392583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
     <SUITE FILE_PATH="coverage/banque_py$app.coverage" NAME="app Coverage Results" MODIFIED="1631713053636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/7zOC06A9B94" />
     <SUITE FILE_PATH="coverage/banque_py$test_output.coverage" NAME="test_output Coverage Results" MODIFIED="1631109542873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

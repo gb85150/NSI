@@ -18,6 +18,11 @@ class File:
         self.liste = []
 
     def lister(self, element):
+        """
+        :param element: élément à ajouter à la liste
+        :return: None
+        ajoute un élément à la liste
+        """
         self.liste.append(element)
 
     def delister(self):

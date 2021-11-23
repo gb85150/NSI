@@ -1,0 +1,3 @@
+def dichotomie(tab, x):
+    """
+    """
