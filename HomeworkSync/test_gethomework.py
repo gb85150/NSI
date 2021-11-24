@@ -1,5 +1,7 @@
 import requests
 
+from newconnect import newaccount
+
 
 def gethomework(TOKEN):
     url = """
@@ -19,3 +21,11 @@ def gethomework(TOKEN):
 # headers = {}
 # response = requests.request("POST", url, headers=headers, data=payload)
 # print(response.text)
+
+
+def json_to_dict(json):
+    return json.loads(json)
+
+if __name__ == '__main__':
+    TOKEN = newaccount()
+    print(json_to_dict(gethomework(TOKEN)))
