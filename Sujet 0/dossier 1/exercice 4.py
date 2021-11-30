@@ -14,8 +14,18 @@ def dichotomie(tab, x):
     fin = len(tab) - 1
     while debut <= fin:
         m = (debut + fin) // 2
-        if x == tab[m]:
+        if tab[m] == x:
+            return True
+        if x > tab[m]:
             debut = m + 1
         else:
             fin = m - 1
-    return True
+    return False, 3
+
+
+if __name__ == "__main__":
+    print(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 28))
+    assert dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 28) == True
+    assert dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 27) == (False, 3)
+    assert dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 1) == (False, 2)
+    assert dichotomie([], 28) == (False, 1)

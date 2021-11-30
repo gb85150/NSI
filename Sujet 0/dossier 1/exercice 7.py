@@ -11,6 +11,7 @@ def fibonacci(int) -> int:
 
 if __name__ == "__main__":
     print(fibonacci(10))
+    print(fibonacci(3))
     assert fibonacci(1) == 1
     assert fibonacci(2) == 1
     assert fibonacci(25) == 75025

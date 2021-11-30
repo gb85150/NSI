@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Some Changes" />
+    <list default="true" id="e051a047-7c38-4b08-ac57-956875a000ef" name="Default Changelist" comment="Some Changes">
+      <change afterPath="$PROJECT_DIR$/Sujet 0/exercice 7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sujet 0/exercice 8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sujet 0/exercice 4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sujet 0/exercice 4.py" afterDir="false" />
+    </list>
     <list id="4b8f2b3f-fbde-41fd-9c5a-ea29d9e8a8fd" name="Changes by sf4086" comment="Changes by sf4086" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +245,8 @@
       <workItem from="1634803473004" duration="2659000" />
       <workItem from="1634908911275" duration="425000" />
       <workItem from="1634909455947" duration="841000" />
+      <workItem from="1637931458916" duration="133000" />
+      <workItem from="1637931663845" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="New Programm (26/07/2021 01:43)">
       <created>1627256603424</created>
