@@ -59,7 +59,7 @@ def feuilles(arbre: Noeud) -> str:
         if arbre.get_gauche() is None and arbre.get_droite() is None:
             return 1
         else:
-            return feuilles(arbre.get_gauche()) + feuilles(arbre.get_droite())
+            return str(feuilles(arbre.get_gauche())) + " " + str(feuilles(arbre.get_droite()))
 
 
 def infixe(arbre: Noeud) -> str:
@@ -138,6 +138,8 @@ def affichage(arbre: Noeud):
                 trace(n - 1, arbre.get_droite(), *droite)
                 aller(x, y)
                 cercle(x, y, 10 * (7 - profondeur)) # tracé du Noeud
+                aller(x + 1, y - taille_police + 2)
+                legende = arbre.get_valeur()
                 t.write(f"{legende}", align="center", font=("Arial", taille_police, "normal"))
                 aller(x - 1, y + taille_police - 2)
 
@@ -145,14 +147,40 @@ def affichage(arbre: Noeud):
             return None
         
         if arbre.get_valeur() is not None:
+            #t.screensize(500, 500)
+            t.speed("fastest") # vitesse maximale
+            t.hideturtle() # on cache la tortue
+            t.width(2) # épaisseur de 2 du crayon
+            # calcul de la profondeur, nécessaire pour ajuster le tracé
+            profondeur = hauteur(arbre) + 1
+            taille_police = 27 - 3 * profondeur # calcul de la taille de la police
+            aller(0, 200) # position de départ
+            trace(profondeur, arbre) # appel de la fontion de tracé
+            t.exitonclick() # on attend un click de la souris pour fermer la fenêtre
+
+
+def ajoute(a, x):
+    """ ajoute x à l'arbre, renvoie un nouvel arbre"""
+    if x <= a.get_valeur():
+        if a.get_gauche() is None:
+            a.set_gauche(Noeud(x, None, None))
+        else:
+            ajoute(a.get_gauche(), x)
+    if x > a.get_valeur():
+        if a.get_droite() is None:
+            a.set_droite(Noeud(x, None, None))
+        else:
+            ajoute(a.get_droite(), x)
 
 
 if __name__ == "__main__":
     n1 = Noeud(1, Noeud(2), Noeud(3))
     n2 = Noeud(2)
-    arbre = Noeud("hello world", n1, n2)
+    arbre = Noeud(99, n1, n2)
     arbre.pprint()
     void = Noeud()
+    for i in range(3):
+        ajoute(arbre, i)
     print(void.est_vide())
     print("nb de feuilles: {}".format(feuilles(arbre)))
     print("taille: {}".format(taille(arbre)))
