@@ -75,7 +75,7 @@ arbre_jeu = Noeud((phrases[0] + questions[0]),
                                        "Fin Bis", 
                                        None
                                      ),
-                                Noeud((phrases[6] + phrases[7] + questions[4])
+                                Noeud((phrases[6] + phrases[7] + questions[4]),
                                      Noeud((phrases[11] + questions[5]),
                                             Noeud((phrases[13] + phrases[16]),   # Fin
                                                  None,
@@ -99,6 +99,7 @@ arbre_jeu = Noeud((phrases[0] + questions[0]),
                          ),
                         )
                  )
+affichage(arbre_jeu)
 print("....!! FIN !!...")
 
 
