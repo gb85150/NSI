@@ -95,8 +95,8 @@ arbre_jeu = Noeud((phrases[0] + questions[0]),
                                                  )
                                           ),
                                      Noeud((phrases[12] + phrases[15]))
-                                     )
-                         ),
+                              )
+                              ),
                         )
                  )
 affichage(arbre_jeu)
