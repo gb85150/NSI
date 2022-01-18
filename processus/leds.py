@@ -30,6 +30,14 @@ def p3():
         ledD.release()
 
 if __name__ == "__main__":
-    p1()
-    p2()
-    p3()
+    if input("bug ? (y/n)") == "n":
+        t1 = t.Thread(target=p1)
+        t2 = t.Thread(target=p2)
+        t3 = t.Thread(target=p3)
+        t1.start()
+        t2.start()
+        t3.start()
+    else:
+        p1()
+        p2()
+        p3()
