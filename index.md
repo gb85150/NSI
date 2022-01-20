@@ -11,7 +11,7 @@ Ce site est toujours en construction et risque de changer au cours des prochains
   <h3>Projet en cours : Révision BAC</h3>
 <div id="project_overview">
   <script src="http://gist-it.appspot.com/github/gb85150/NSI/blob/master/tkter/Ex2.py">  </script>
-  <href src="https://gb85150.fr">Projet de 1ère</href>
+  <a href="https://gb85150.fr"Projet de 1ère>
 </div>
 <div id="disqus_thread"></div>
 <script>
