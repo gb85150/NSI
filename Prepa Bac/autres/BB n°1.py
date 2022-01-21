@@ -15,6 +15,7 @@ class Noeud:
 				self.droit = Noeud(cle)
 			else:
 				self.droit.insere(cle)
+
 	def hauteur(self):
 		if self.gauche == None and self.droit == None:
 			return 0
@@ -29,6 +30,16 @@ class Noeud:
 				return hg+1
 			else:
 				return hd+1
+	
+	def taille(self):
+		if self.gauche == None and self.droit == None:
+			return 1
+		if self.gauche == None:
+			return 1 + self.droit.taille()
+		elif self.droit == None:
+			return 1 + self.gauche.taille()
+		else:
+			return 1 + self.gauche.taille() + self.droit.taille()
 
 
 class Arbre:
@@ -40,4 +51,13 @@ class Arbre:
 
 	def hauteur(self):
 		return self.racine.hauteur()
+	
+	def taille(self):
+		return self.racine.taille()
+	
+	def bien_construit(self):
+		"""
+			Vérifie si l'arbre binaire de recherche est bien compris entre (2**(h+1m))-1 et 2**h
+		"""
+		return self.taille() == (2**self.hauteur()+1)-1 or self.taille == 2**self.hauteur()
 	
