@@ -5,6 +5,15 @@ class Graphe_d:
     def __init__(self) -> None:
         self.Graph = {}
     
+    def add_edge(self, node1: int, node2: int) -> None:
+        """
+        Ajoute un arc entre les noeuds
+        """
+        if node1 in self.Graph:
+            self.Graph[node1].append(node2)
+        else:
+            self.Graph[node1] = [node2]
+
     def add_node(self, node: int, rel: list) -> None:
         """
         Ajoute un noeud au graphe
@@ -45,4 +54,14 @@ if __name__ == "__main__":
     G.add_node(1, [2, 3])
     G.add_node(2, [3])
     G.add_node(3, [])
+    G.add_edge(0, 1)
+    G.add_edge(0, 2)
+    G.add_edge(1, 2)
+    G.add_edge(1, 3)
+    G.add_edge(2, 3)
+    print(G.is_linked(0, 1))
+    print(G.is_linked(0, 2))
+    print(G.is_linked(1, 2))
+    print(G.is_linked(1, 3))
+    print(G.is_linked(2, 3))
     print(G)
