@@ -3,7 +3,7 @@ import requests
 import json
 
 
-class Api():
+class Api(__password=None,__username=None,__url=None, __token=None):
     """
 
     """
