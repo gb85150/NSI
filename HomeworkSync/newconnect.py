@@ -3,7 +3,7 @@ import requests
 import json
 
 
-class Api(__password=None, __mail=None):
+class Api():
     """
 
     """
@@ -13,7 +13,7 @@ class Api(__password=None, __mail=None):
 
         """
         print("Launching... Please wait !")
-        if self.__password is None or self.__mail is None:
+        if self.__password or self.__mail:
             self.__mail = input("Email ? :")
             self.__password = gp.getpass(prompt="Password ? :")
             print("Ready")
@@ -26,13 +26,10 @@ class Api(__password=None, __mail=None):
         print(result.status_code)
         return json.load(result)
 
-
-DB = []
-
-
 def newaccount(db: list):
     swap = Api()
     db += swap
 
 
+DB = []
 newaccount(DB)
