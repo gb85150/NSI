@@ -47,6 +47,7 @@ if __name__ == "__main__":
         hwcalendar[i].click()
         time.sleep(1)
         back=chrome.find_element(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[2]/ed-cdt-eleve-onglets/ul/li[9]/a')
+        print("Check ({}/{})".format(i+1, len(hwcalendar)))
         back.click()
         time.sleep(1)
         hwcalendar = chrome.find_elements(by=By.CLASS_NAME, value="date")
