@@ -2,11 +2,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import getpass as gp
+
+
+"""Help :
 # Setup instructions :
 # 1. Install selenium (pip install selenium)
 # 2. Set chrome driver to path (modify environment variable) (Optional)
 # 3. Set executable path to chromedriver executable (Do this if you did not set the environment variable). See line 70.
 # 4. Run the script
+"""
 
 
 def connect():
@@ -62,21 +66,57 @@ def print_homework_list() -> None:
         hwcalendar = chrome.find_elements(by=By.CLASS_NAME, value="date")
     return None
 
+
 # Initialize the driver
+switch = False
 options = webdriver.ChromeOptions()
 chrome = webdriver.Chrome(executable_path=r'E:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
 chrome.get("https://www.ecoledirecte.com/")
 
 
 if __name__ == "__main__":
-    print("\n \n \n starting...\n \n \n")	
+    print("\nStarting... Please prepare your logins\n \n \n")	
     connect()
     time.sleep(3)
     print_homework_list()
-    # daytab = chrome.find_element(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[2]/ed-cdt-eleve-onglets/ul/li[2]/a')
-    # daytab.click()
     print("\n \n \n finished...\n \n \n")
     time.sleep(3)
-    chrome.quit()
+    chrome.quit() if switch == True else None
 
 # NB : 0.7s serait peut etre bien pour le sleep
+# test = chrome.find_element(by=By.ID, value="test")
+# print(test.is_selected())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dico = {
+    "Day" : {
+        "Subject" : {
+            "Task" : "Content",
+            "IsDone" : False
+        },
+        "AnotherSubject" : {
+            "Task" : "Content",
+            "IsDone" : True
+        }
+    },
+    "AnotherDay" : {
+        "Subject" : {
+            "Task" : "Content",
+            "IsDone" : False
+        }
+    }
+}
+with open("test.txt", "w") as f:
+    f.write(dico)
