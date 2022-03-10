@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import getpass as gp
+import json
 
 
 """Help :
@@ -20,8 +21,8 @@ def connect():
 
     # Enter the username and password
 
-    username.send_keys(input("Email : "))
-    password.send_keys(gp.getpass("Password : "))
+    username.send_keys("geoffrey.bousseau@gmail.com")
+    password.send_keys("01099011109gb")
 
     # Check information provided
     # showpass = chrome.find_element_by_id("show-password")
@@ -32,18 +33,23 @@ def connect():
     login.click()
 
 
-def print_homework_list() -> None:
+def get_homework_list() -> dict:
     """
-    Prints the list of homework by webscraping the ecoledirecte.com website
+    Gets the list of homework by webscraping the ecoledirecte.com website
     :return: None
     """
     homework = chrome.find_element(by=By.XPATH, value='//*[@id="container-menu"]/ed-menu/div/div/div/ul/li[7]/ed-menu-block-item/div/a')
     homework.click()
     time.sleep(1.5)
     hwcalendar = chrome.find_elements(by=By.CLASS_NAME, value="date")
+    dico_devoirs = {}
+
+    # Boucle sur les dates
     for i in range(len(hwcalendar)):
         print(hwcalendar[i].text)
         print("\n")
+        dico_devoirs[hwcalendar[i].text] = {}
+        current_date = hwcalendar[i].text
         hwcalendar[i].click()
         time.sleep(1)
         back=chrome.find_element(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[2]/ed-cdt-eleve-onglets/ul/li[9]/a')
@@ -59,26 +65,50 @@ def print_homework_list() -> None:
             print("==========================================================")
             print("Tâche : \n{}".format(tmphw_content[i].text))
             print("==========================================================")
+
+            # Add the homework to the dictionary
+            tmphw_title=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/h3')
+            tmphw_content=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[2]/div/div[1]/p/p')
+            swap = {tmphw_title[i].text: tmphw_content[i].text}
+            dico_devoirs[current_date] = swap
         
         # Go back to the summery
         back.click()
         time.sleep(1)
         hwcalendar = chrome.find_elements(by=By.CLASS_NAME, value="date")
+    return dico_devoirs
+
+
+def save_homework_list(dico: dict):
+    """
+    Saves the homework list to a JSON file with json.dump()
+    :param dico: The homework
+    :return: None
+    """
+    with open("homework.json", "a") as f:
+        json.dump(dico, f, indent=4)
+
+
+def init_driver() -> None:
+    """
+    Initializes the driver
+    :return: None
+    """
+    global switch
+    global chrome
+    switch = False
+    options = webdriver.ChromeOptions()
+    chrome = webdriver.Chrome(executable_path=r'E:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
+    chrome.get("https://www.ecoledirecte.com/")
     return None
 
 
-# Initialize the driver
-switch = False
-options = webdriver.ChromeOptions()
-chrome = webdriver.Chrome(executable_path=r'E:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
-chrome.get("https://www.ecoledirecte.com/")
-
-
 if __name__ == "__main__":
-    print("\nStarting... Please prepare your logins\n \n \n")	
+    print("\nStarting... Please prepare your logins\n \n \n")
+    init_driver()	
     connect()
     time.sleep(3)
-    print_homework_list()
+    save_homework_list(get_homework_list())
     print("\n \n \n finished...\n \n \n")
     time.sleep(3)
     chrome.quit() if switch == True else None
@@ -100,23 +130,23 @@ if __name__ == "__main__":
 
 
 
-dico = {
-    "Day" : {
-        "Subject" : {
-            "Task" : "Content",
-            "IsDone" : False
-        },
-        "AnotherSubject" : {
-            "Task" : "Content",
-            "IsDone" : True
-        }
-    },
-    "AnotherDay" : {
-        "Subject" : {
-            "Task" : "Content",
-            "IsDone" : False
-        }
-    }
-}
-with open("test.txt", "w") as f:
-    f.write(dico)
+# dico = {
+#     "Day" : {
+#         "Subject" : {
+#             "Task" : "Content",
+#             "IsDone" : False
+#         },
+#         "AnotherSubject" : {
+#             "Task" : "Content",
+#             "IsDone" : True
+#         }
+#     },
+#     "AnotherDay" : {
+#         "Subject" : {
+#             "Task" : "Content",
+#             "IsDone" : False
+#         }
+#     }
+# }
+# with open("test.txt", "w") as f:
+#     f.write(dico)
