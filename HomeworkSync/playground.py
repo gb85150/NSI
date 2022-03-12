@@ -21,8 +21,8 @@ def connect():
 
     # Enter the username and password
 
-    username.send_keys("geoffrey.bousseau@gmail.com")
-    password.send_keys("01099011109gb")
+    username.send_keys(input("Email : "))
+    password.send_keys(gp.getpass("Password : "))
 
     # Check information provided
     # showpass = chrome.find_element_by_id("show-password")
