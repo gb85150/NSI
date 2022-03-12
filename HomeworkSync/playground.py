@@ -54,11 +54,12 @@ def get_homework_list() -> dict:
         time.sleep(1)
         back=chrome.find_element(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[2]/ed-cdt-eleve-onglets/ul/li[9]/a')
         
-        
         print("Check ({}/{})".format(i+1, len(hwcalendar)))
+        
         # Get all the homework
         tmphw_title=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/h3')
         tmphw_content=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[2]/div/div[1]/p/p')
+        
         # Print the homework
         for i in range(len(tmphw_title)):
             print("Matière : {}".format(tmphw_title[i].text))
@@ -69,7 +70,11 @@ def get_homework_list() -> dict:
             # Add the homework to the dictionary
             tmphw_title=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/h3')
             tmphw_content=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[2]/div/div[1]/p/p')
-            swap = {tmphw_title[i].text: tmphw_content[i].text}
+            tmphw_isDone=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/p/label/input')
+            swap = {}
+            swap[tmphw_title[i].text] = {
+                "Travail" : tmphw_content[i].text,
+                "IsDone" : tmphw_isDone[i].is_selected()}
             dico_devoirs[current_date] = swap
         
         # Go back to the summery
@@ -85,7 +90,7 @@ def save_homework_list(dico: dict):
     :param dico: The homework
     :return: None
     """
-    with open("homework.json", "a") as f:
+    with open("HomeworkSync/homework.json", "w") as f:
         json.dump(dico, f, indent=4)
 
 
@@ -96,9 +101,9 @@ def init_driver() -> None:
     """
     global switch
     global chrome
-    switch = False
+    switch = True
     options = webdriver.ChromeOptions()
-    chrome = webdriver.Chrome(executable_path=r'E:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
+    chrome = webdriver.Chrome(executable_path=r'F:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
     chrome.get("https://www.ecoledirecte.com/")
     return None
 
@@ -112,41 +117,3 @@ if __name__ == "__main__":
     print("\n \n \n finished...\n \n \n")
     time.sleep(3)
     chrome.quit() if switch == True else None
-
-# NB : 0.7s serait peut etre bien pour le sleep
-# test = chrome.find_element(by=By.ID, value="test")
-# print(test.is_selected())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# dico = {
-#     "Day" : {
-#         "Subject" : {
-#             "Task" : "Content",
-#             "IsDone" : False
-#         },
-#         "AnotherSubject" : {
-#             "Task" : "Content",
-#             "IsDone" : True
-#         }
-#     },
-#     "AnotherDay" : {
-#         "Subject" : {
-#             "Task" : "Content",
-#             "IsDone" : False
-#         }
-#     }
-# }
-# with open("test.txt", "w") as f:
-#     f.write(dico)
