@@ -1,0 +1,20 @@
+{
+    "MARDI 15 MARS": {
+        "ANGLAIS LV1": {
+            "Travail": "1- Review your lessons.",
+            "IsDone": false
+        }
+    },
+    "MERCREDI 16 MARS": {
+        "ALLEMAND LV2": {
+            "Travail": "Lire la t\u00e2che finale et expliquer en fran\u00e7ais son contenu.",
+            "IsDone": false
+        }
+    },
+    "JEUDI 17 MARS": {
+        "ENSEIGN.SCIENTIFIQUE": {
+            "Travail": "Faire T1C4A2. Energie issue des combustions et qualit\u00e9 de l'air atmosph\u00e9rique",
+            "IsDone": false
+        }
+    }
+}

@@ -1,7 +1,6 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
+from DriverIgnitor import connect, init_driver
 import time
-import getpass as gp
 import json
 
 
@@ -12,25 +11,6 @@ import json
 # 3. Set executable path to chromedriver executable (Do this if you did not set the environment variable). See line 70.
 # 4. Run the script
 """
-
-
-def connect():
-    # Find the username and password fields
-    username = chrome.find_element(by=By.ID, value="username")
-    password = chrome.find_element(by=By.ID, value="password")
-
-    # Enter the username and password
-
-    username.send_keys(input("Email : "))
-    password.send_keys(gp.getpass("Password : "))
-
-    # Check information provided
-    # showpass = chrome.find_element_by_id("show-password")
-    # showpass.click()
-
-
-    login = chrome.find_element(by=By.ID, value="connexion")
-    login.click()
 
 
 def get_homework_list() -> dict:
@@ -94,23 +74,10 @@ def save_homework_list(dico: dict):
         json.dump(dico, f, indent=4)
 
 
-def init_driver() -> None:
-    """
-    Initializes the driver
-    :return: None
-    """
-    global switch
-    global chrome
-    switch = True
-    options = webdriver.ChromeOptions()
-    chrome = webdriver.Chrome(executable_path=r'F:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
-    chrome.get("https://www.ecoledirecte.com/")
-    return None
-
-
 if __name__ == "__main__":
+    switch = True
     print("\nStarting... Please prepare your logins\n \n \n")
-    init_driver()	
+    chrome = init_driver()	
     connect()
     time.sleep(3)
     save_homework_list(get_homework_list())
