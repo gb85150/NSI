@@ -36,7 +36,7 @@ def connect():
 
 
 class ChromeDriver:
-    def __init__(self):
+    def __init__(self, username:str = None, password:str = None):
             """
             Initializes the driver
             :return: None
@@ -44,10 +44,10 @@ class ChromeDriver:
             options = webdriver.ChromeOptions()
             self.chrome = webdriver.Chrome(executable_path=r'F:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
             self.chrome.get("https://www.ecoledirecte.com/")
-            self.__connect()
+            self.__connect(username, password)
     
     
-    def __connect(self):
+    def __connect(self, username:str = None, password:str = None):
         """
         Find the username and password fields.
         Enter the username and password.
@@ -59,9 +59,8 @@ class ChromeDriver:
         self.__password = self.chrome.find_element(by=By.ID, value="password")
 
         # Enter the username and password
-
-        self.__username.send_keys(input("Email : "))
-        self.__password.send_keys(gp.getpass("Password : "))
+        self.__username.send_keys(username if username else input("Email : "))
+        self.__password.send_keys(password if password else gp.getpass("Password : "))
 
         # Check information provided
         # showpass = chrome.find_element_by_id("show-password")
@@ -74,16 +73,45 @@ class ChromeDriver:
 
     # Getters and Setters
     def get_driver(self) -> webdriver:
+        """
+        Get the driver
+        :return: webdriver
+        """
         return self.chrome
     
     def get_username(self) -> str:
+        """
+        Get the username
+        :return: str
+        """
         return self.__username
     
     def get_password(self) -> str:
+        """
+        Get the password
+        :return: str
+        """
         return self.__password
     
-    def set_username(self, username:str):
+    def set_username(self, username:str) -> None:
+        """
+        Set the username
+        :param username: str
+        :return: None
+        """
         self.__username = username
     
-    def set_password(self, password:str):
+    def set_password(self, password:str) -> None:
+        """
+        Set the password
+        :param password: str
+        :return: None
+        """
         self.__password = password
+
+def extractchromedriver() -> webdriver:
+    """
+    Extracts the driver (dirty but working method)
+    :return: chrome
+    """
+    return ChromeDriver.get_driver()

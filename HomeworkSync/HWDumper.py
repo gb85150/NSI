@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
-from DriverIgnitor import ChromeDriver
+from DriverIgnitor import ChromeDriver, extractchromedriver
+from LoginPrompt import login
 import time
 import json
 
@@ -77,8 +78,9 @@ def save_homework_list(dico: dict):
 if __name__ == "__main__":
     switch = True
     print("\nStarting... Please prepare your logins\n \n \n")
-    ChromeDriver()
-    chrome = ChromeDriver.get_driver()
+    email, password = login()
+    ChromeDriver(email, password)
+    chrome = extractchromedriver()
     time.sleep(3)
     save_homework_list(get_homework_list())
     print("\n \n \n finished...\n \n \n")
