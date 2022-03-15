@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from DriverIgnitor import ChromeDriver, extractchromedriver
+from DriverIgnitor import ChromeDriver
 from LoginPrompt import login
 import time
 import json
@@ -39,7 +39,7 @@ def get_homework_list() -> dict:
         
         # Get all the homework
         tmphw_title=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/h3')
-        tmphw_content=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[2]/div/div[1]/p/p')
+        tmphw_content=chrome.find_elements(by=By.CLASS_NAME, value='contenu-non-maitrise')
         
         # Print the homework
         for i in range(len(tmphw_title)):
@@ -52,9 +52,13 @@ def get_homework_list() -> dict:
             tmphw_title=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/h3')
             tmphw_content=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[2]/div/div[1]/p/p')
             tmphw_isDone=chrome.find_elements(by=By.XPATH, value='/html/body/app-root/div/ed-authenticated-layout/div[2]/div[2]/ed-cdt/ed-cdt-eleve/div/div/div[2]/div[1]/div/ed-cdt-eleve-view-day/div/div[2]/div/ed-cdt-eleve-taf-seance/div[1]/p/label/input')
+            tmphw_sumup = ''
+            for j in range(len(tmphw_content)):
+                tmphw_sumup += tmphw_content[j].text
+                tmphw_sumup += "\n"
             swap = {}
             swap[tmphw_title[i].text] = {
-                "Travail" : tmphw_content[i].text,
+                "Travail" : tmphw_sumup.text,
                 "IsDone" : tmphw_isDone[i].is_selected()}
             dico_devoirs[current_date] = swap
         
@@ -79,8 +83,8 @@ if __name__ == "__main__":
     switch = True
     print("\nStarting... Please prepare your logins\n \n \n")
     email, password = login()
-    ChromeDriver(email, password)
-    chrome = extractchromedriver()
+    chromeobject = ChromeDriver(email, password)
+    chrome = chromeobject.get_driver()
     time.sleep(3)
     save_homework_list(get_homework_list())
     print("\n \n \n finished...\n \n \n")

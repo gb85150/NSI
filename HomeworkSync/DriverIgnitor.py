@@ -11,7 +11,7 @@ def init_driver():
     """
     global chrome
     options = webdriver.ChromeOptions()
-    chrome = webdriver.Chrome(executable_path=r'F:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
+    chrome = webdriver.Chrome(executable_path=r'E:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
     chrome.get("https://www.ecoledirecte.com/")
     return chrome
 
@@ -42,7 +42,7 @@ class ChromeDriver:
             :return: None
             """
             options = webdriver.ChromeOptions()
-            self.chrome = webdriver.Chrome(executable_path=r'F:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
+            self.chrome = webdriver.Chrome(executable_path=r'E:\NSI\NSI\HomeworkSync\res\chromedriver.exe', options=options)
             self.chrome.get("https://www.ecoledirecte.com/")
             self.__connect(username, password)
     
@@ -108,10 +108,3 @@ class ChromeDriver:
         :return: None
         """
         self.__password = password
-
-def extractchromedriver() -> webdriver:
-    """
-    Extracts the driver (dirty but working method)
-    :return: chrome
-    """
-    return ChromeDriver.get_driver()

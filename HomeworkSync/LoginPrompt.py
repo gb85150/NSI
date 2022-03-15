@@ -1,4 +1,5 @@
 from tkinter import Tk, Entry, Label, Button, PhotoImage, StringVar
+from tkinter import ttk
 
 
 def login() -> str:
@@ -8,19 +9,21 @@ def login() -> str:
     """
     global root
     root=Tk()
+    root.tk.call("source", r"HomeworkSync/res/W11/sun-valley.tcl")
+    root.tk.call("set_theme", "dark")
     root.title("Login")
     root.geometry("300x350")
     root.resizable(False, False)
-    root.configure(background="SteelBlue2", borderwidth=0, highlightthickness=0, relief="flat", padx=0, pady=0)
+    root.configure()
 
     #Variables de stockage des Entry
     emailVar=StringVar()
     passwordVar=StringVar()
 
     # Logo
-    logo = PhotoImage(file="HomeworkSync/res/logoEcoleDirecte.png")
+    logo = PhotoImage(file=r"HomeworkSync/res/logoEcoleDirecte.png")
     logo.zoom(25)
-    logo_label = Label(root, image=logo, background="SteelBlue2")
+    logo_label = Label(root, image=logo)
     logo_label.image = logo
     logo_label.pack(padx=10, pady=10)
 
